@@ -1,0 +1,44 @@
+[
+  {
+    "id": "unlimited",
+    "title": "Krypton Unlimited",
+    "rate": "$150/month",
+    "notes": "Unlimited programs include KRYPTON Fit, Yoga, Open Gym and complimentary access to Beyond The Whiteboard!"
+  },
+  {
+    "id": "unlimited-autopay",
+    "title": "Krypton Unlimited (Autopay)",
+    "rate": "$130/month",
+    "notes": "Get a 20$/month discount by signing up for auto pay!"
+  },
+  {
+    "id": "lite",
+    "title": "Krypton Lite",
+    "rate": "$100/month",
+    "notes": "Join up to 3 classes per week!"
+  },
+  {
+    "id": "couples",
+    "title": "Krypton Couples",
+    "rate": "$230/month",
+    "notes": "Unlimited programs include KRYPTON Fit, Yoga, Open Gym and complimentary access to Beyond The Whiteboard!"
+  },
+  {
+    "id": "couples-lite",
+    "title": "Krypton Couples (Lite)",
+    "rate": "$180/month",
+    "notes": "You and your partner can join up to 3 classes per week!"
+  },
+  {
+    "id": "family",
+    "title": "Krypton Family",
+    "rate": "$280/month",
+    "notes": "Unlimited programs include KRYPTON Fit, Yoga, Open Gym and complimentary access to Beyond The Whiteboard!"
+  },
+  {
+    "id": "blueprint",
+    "title": "Ben Smith Blueprint",
+    "rate": "$50/month",
+    "notes": "Looking for an online program? This programming is FOR BOTH: COMPETITIVE CROSSFIT ATHLETES: looking to improve performance in the open, regionals, or local competitions.  These workouts are designed based off of Ben Smith’s personal daily programming. EVERYDAY CROSSFIT ATHLETES: looking to follow a proven programming structure designed to improve overall fitness (a balance between strength, gymnastics skills, olympic lifting, running, rowing, and other endurance work). Scaling options for each workout can also be provided upon request. * The daily workouts will be available on BEYOND THE WHITEBOARD."
+  }
+]

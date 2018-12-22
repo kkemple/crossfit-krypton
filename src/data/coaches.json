@@ -1,0 +1,30 @@
+[
+  {
+    "id": "ben-smith",
+    "name": "Ben Smith",
+    "certifications": [
+      "CrossFit Level 1 Trainer",
+      "CrossFit Running and Endurance"
+    ],
+    "short": "Ben Smith is the Lead Programmer as well as a coach.",
+    "bio": "Ben Smith is the Co-Owner and founder of CrossFit Krypton and also serves as the Lead Programmer and Coach. Ben was an avid baseball player growing up and was introduced to CrossFit his senior in High School (2008). Since then, as a self instructed athlete, Ben won the 2015 CrossFit Games and became the sixth man to earn the title of \"Fittest Man on Earth\", has finished 1st place in the Mid-Atlantic Region 5 times and has a record 9 consecutive appearances at the CrossFit Games. One of the most successful CrossFitters of all time, Ben is one of only four men that have multiple podium finishes at the CrossFit Games. Ben’s personal philosophy is that through hard work and dedication anything is possible. He has found that anything worth doing in life should be done to the best of a person’s ability, and this includes CrossFit!"
+  },
+  {
+    "id": "adam-klink",
+    "name": "Adam Klink",
+    "certifications": [
+      "CrossFit Level 2 Trainer",
+      "CrossFit Level 1 Trainer",
+      "CrossFit Kids"
+    ],
+    "short": "Adam Klink is the Operations Manager and Head Coach.",
+    "bio": "Adam Klink is the Operations Manager and Head Coach at CrossFit Krypton. A premiere athlete his entire life, Adam was a tri-sport athlete at Great Bridge High School and received the NSCAA/Adidas All-American award for soccer in 2008. Adam continued to excel at Rutgers University where he served as goalkeeper of the soccer team for 4 years, won the Rutgers Men’s Soccer Student Athlete of the Year award and graduated with a Sports Management degree in 2012. After graduation, Adam found a passion for CrossFit, qualifying for the Northeast Regional competition in 2013, the Mid-Atlantic Regionals in 2014 and the Atlantic Regionals in 2015, 2016 and 2017. Adam continues to excel in CrossFit competitions across the country both as an individual and member of various sponsored teams, maintaining his quest to compete at the CrossFit Games. Adam enjoys the challenges of CrossFit, both physical and mental. He loves the power of camaraderie and sportsmanship that embody the CrossFit community and the fact that Crossfit provides an opportunity for each individual to improve the quality of their life."
+  },
+  {
+    "id": "kelley-boblit",
+    "name": "Kelley Boblit",
+    "certifications": ["CrossFit Level 1 Trainer", "CrossFit Kids"],
+    "short": "Kelley Boblit is a CrossFit Level 1 trainer and CrossFit Kids trainer.",
+    "bio": "Kelley Boblit is a CrossFit Level 1 trainer and CrossFit Kids trainer. Kelley grew up in Cincinnati, Ohio and competed in gymnastics from the ages of 3-13. In 7th grade Kelley started to play volleyball in school as well as for a Junior Olympics club team. In 2007, Kelley was voted Player of the Year in the Miami Valley Conference. She continued on to play volleyball in college at Trinity International University. Kelley found CrossFit in 2012 and has never looked back. She competed on a team in the 2015 Mid Atlantic Regionals and has continued to compete in local competitions. In 2017 Kelley competed in the Atlantic Regional CrossFit competition held in Atlanta Georgia where she represented CrossFit Krypton. While earning her Masters in Special Education, Kelley loves to coach at CrossFit Krypton. She also loves coaching one-on-one with individuals of varying abilities who need extra support during classes and/or individualized training. Kelley loves the mental and physical challenges that CrossFit presents and loves the community that CrossFit provides."
+  }
+]
