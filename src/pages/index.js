@@ -3,13 +3,13 @@ import { Link, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import styled from '@emotion/styled'
 
-import Layout from '../components/layout'
 import {
   ContentContainer,
   SectionContent,
   SectionSpacer,
   SectionSubTitle,
   SectionTitle,
+  Layout,
 } from '../components'
 
 const HeroContainer = styled('div')`
@@ -46,19 +46,20 @@ const GetStartedContainer = styled(`div`)`
   align-items: center;
 `
 
-const GetStartedCallout = styled(`div`)`
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 48px 24px;
-  width: 50%;
-`
-
 const GetStartedButton = styled(Link)`
-  padding: 12px 18px;
+  padding: 12px 24px;
   background-color: #cd3c33;
   color: white;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 12px;
+  border-radius: 3px;
+`
+
+const GetStartedCallout = styled(`div`)`
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 48px 24px;
+  width: 50%;
 `
 
 const GetStartedTitle = styled(`h2`)`

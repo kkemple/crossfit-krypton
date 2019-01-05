@@ -1,15 +1,14 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import { graphql } from 'gatsby'
 import styled from '@emotion/styled'
 
-import Layout from '../components/layout'
 import {
   ContentContainer,
   SectionContent,
   SectionSpacer,
   SectionSubTitle,
   SectionTitle,
+  Layout,
 } from '../components'
 
 const SectionDivider = styled(`div`)`

@@ -1,14 +1,13 @@
 import React from 'react'
 import styled from '@emotion/styled'
 
-import Layout from '../components/layout'
 import {
   ContentContainer,
   SectionSpacer,
   SectionSubTitle,
   SectionTitle,
+  Layout,
 } from '../components'
-import { auto } from 'eol'
 
 const ScheduleLabels = styled(`div`)`
   display: flex;
@@ -101,13 +100,12 @@ const IndexPage = ({ data }) => (
       <SectionSubTitle>
         Schedule subject to change, always reach out to us around holidays!
       </SectionSubTitle>
-      <SectionSpacer />
       <ScheduleLegend
         css={{
           maxWidth: '400px',
           marginLeft: 'auto',
           marginRight: 'auto',
-          marginBottom: '8px',
+          marginBottom: '24px',
         }}
       >
         <div css={{ display: 'flex', alignItems: 'center' }}>

@@ -1,12 +1,26 @@
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
+import { css } from '@emotion/core'
 import styled from '@emotion/styled'
 
 import Logo from '../components/logo'
 import ContentContainer from '../components/content-container'
 
 // ck red #cd3c33
+
+const navItemCss = css`
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  margin-left: 10px;
+
+  :active {
+    color: #cd3c33;
+  }
+`
 
 const activeStyles = {
   color: `#cd3c33`,
@@ -43,16 +57,11 @@ const Nav = styled(`nav`)`
 `
 
 const NavItem = styled(Link)`
-  color: black;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 12px;
-  font-weight: bold;
-  margin-left: 10px;
+  ${navItemCss}
+`
 
-  :active {
-    color: #cd3c33;
-  }
+const ExternalNavItem = styled(`a`)`
+  ${navItemCss}
 `
 
 const Header = ({ siteTitle, showDropShadow }) => (
@@ -79,9 +88,12 @@ const Header = ({ siteTitle, showDropShadow }) => (
           <NavItem activeStyle={activeStyles} to="/schedule">
             Schedule
           </NavItem>
-          <NavItem activeStyle={activeStyles} to="/store">
+          <ExternalNavItem
+            target="_blank"
+            href="https://crossfitkrypton.sites.zenplanner.com/retail.cfm"
+          >
             Store
-          </NavItem>
+          </ExternalNavItem>
           <NavItem activeStyle={activeStyles} to="/contact-us">
             Contact Us
           </NavItem>

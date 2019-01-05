@@ -6,6 +6,13 @@ module.exports = {
     'gatsby-transformer-json',
     'gatsby-plugin-react-helmet',
     {
+      resolve: `gatsby-plugin-netlify-functions`,
+      options: {
+        functionsSrc: `${__dirname}/src/lambda`,
+        functionsOutput: `${__dirname}/src/functions`,
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
