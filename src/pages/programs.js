@@ -21,18 +21,39 @@ const SectionDivider = styled(`div`)`
   margin-right: auto;
 `
 
+const Button = styled(`a`)`
+  padding: 8px 24px;
+  background-color: #cd3c33;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  border-radius: 3px;
+  margin-top: 16px;
+  display: inline-block;
+`
+
+const Section = styled(`div`)`
+  text-align: center;
+`
+
 const ProgramsPage = ({ data }) => (
   <Layout>
     <ContentContainer>
       {data.allProgramsJson.edges.map(({ node }) => {
         return (
-          <div key={node.id}>
+          <Section key={node.id}>
             <SectionSpacer />
             <SectionTitle>{node.title}</SectionTitle>
             <SectionSubTitle>{node.rate}</SectionSubTitle>
             <SectionContent>{node.notes}</SectionContent>
+            {node.action && (
+              <Button target="_blank" href={node.action.payload.href}>
+                {node.action.payload.text}
+              </Button>
+            )}
             <SectionDivider />
-          </div>
+          </Section>
         )
       })}
     </ContentContainer>
@@ -50,6 +71,12 @@ export const query = graphql`
           title
           rate
           notes
+          action {
+            payload {
+              href
+              text
+            }
+          }
         }
       }
     }

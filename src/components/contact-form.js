@@ -36,7 +36,7 @@ const Input = styled(`input`)`
 
 const TextArea = styled(`textarea`)`
   ${baseInputStyles}
-  height: 400px;
+  height: 200px;
 `
 
 const Form = styled(`form`)`

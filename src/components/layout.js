@@ -16,6 +16,7 @@ const Page = styled(`div`)`
   justify-content: space-between;
   min-height: 100vh;
   background-color: white;
+  max-width: 100%;
 `
 
 const Content = styled(`div`)`

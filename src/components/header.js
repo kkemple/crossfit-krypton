@@ -20,6 +20,10 @@ const navItemCss = css`
   :active {
     color: #cd3c33;
   }
+
+  @media (max-width: 780px) {
+    font-size: 10px;
+  }
 `
 
 const activeStyles = {
@@ -38,22 +42,44 @@ const Container = styled(`div`)`
   right: 0;
   height: 64px;
   align-items: center;
+
+  @media (max-width: 780px) {
+    height: auto;
+  }
 `
 
 const FlexContainer = styled(`div`)`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: 780px) {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    height: 100%;
+  }
 `
 
 const LogoContainer = styled(`div`)`
   width: 70px;
   height: 40px;
+
+  @media (max-width: 780px) {
+    width: 35px;
+    height: 20px;
+  }
 `
 
 const Nav = styled(`nav`)`
   display: flex;
   align-items: center;
+
+  @media (max-width: 780px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 `
 
 const NavItem = styled(Link)`
@@ -68,7 +94,13 @@ const Header = ({ siteTitle, showDropShadow }) => (
   <Container
     css={showDropShadow ? { boxShadow: `0 3px 9px rgba(0, 0, 0, 0.1)` } : {}}
   >
-    <ContentContainer>
+    <ContentContainer
+      css={css`
+        @media (max-width: 780px) {
+          height: 100%;
+        }
+      `}
+    >
       <FlexContainer>
         <LogoContainer>
           <Link to="/">

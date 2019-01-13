@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import Img from 'gatsby-image'
 
 export { default as ContentContainer } from './content-container'
 export { default as Header } from './header'
@@ -17,6 +18,10 @@ export const SectionSubTitle = styled(`h4`)`
 export const SectionTitle = styled(`h3`)`
   text-align: center;
   margin-bottom: 10px;
+
+  @media (max-width: 480px) {
+    font-size: 20px;
+  }
 `
 
 export const SectionContent = styled(`div`)`
@@ -25,9 +30,53 @@ export const SectionContent = styled(`div`)`
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+
+  @media (max-width: 480px) {
+    font-size: 14px;
+  }
 `
 
 export const SectionSpacer = styled(`div`)`
   width: 100%;
   padding: 32px 0;
+`
+
+export const Coaches = styled(`div`)`
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  margin-top: 32px;
+  flex-wrap: wrap;
+`
+
+export const CoachTitle = styled(`h5`)`
+  color: #cd3c33;
+  text-transform: uppercase;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 32px;
+  margin-bottom: 0;
+`
+
+export const CoachDescription = styled(`span`)`
+  display: block;
+  margin-top: 8px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  width: 200px;
+  font-size: 12px;
+`
+
+export const CoachImg = styled(Img)`
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #cd3c33;
+  margin: 0 32px;
+`
+
+export const Coach = styled(`div`)`
+  margin-bottom: 24px;
 `

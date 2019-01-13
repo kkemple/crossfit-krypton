@@ -14,6 +14,23 @@ const ScheduleLabels = styled(`div`)`
   align-items: stretch;
   justify-content: space-between;
   border: 1px solid #eeeeee;
+
+  @media (max-width: 780px) {
+    display: none;
+  }
+`
+
+const ScheduleLabelsMobile = styled(`span`)`
+  display: none;
+  border: 1px solid #eeeeee;
+  text-align: center;
+  width: 100%;
+  font-size: 12px;
+  color: #888888;
+
+  @media (max-width: 780px) {
+    display: inline-block;
+  }
 `
 
 const ScheduleLabel = styled(`span`)`
@@ -77,6 +94,10 @@ const ScheduleTime = styled(`span`)`
   height: 34px;
   color: #888888;
   font-size: 12px;
+
+  @media (max-width: 780px) {
+    font-size: 8px;
+  }
 `
 
 const Group = styled(`div`)`
@@ -90,6 +111,10 @@ const ScheduleLegend = styled(`div`)`
   display: flex;
   align-items: center;
   justify-content: space-around;
+
+  @media (max-width: 780px) {
+    flex-wrap: wrap;
+  }
 `
 
 const IndexPage = ({ data }) => (
@@ -193,6 +218,7 @@ const IndexPage = ({ data }) => (
           <ScheduleLabel>Sunday</ScheduleLabel>
         </ScheduleRow>
       </ScheduleLabels>
+      <ScheduleLabelsMobile>Mon - Sun</ScheduleLabelsMobile>
       <Schedule>
         <ScheduleRow css={{ borderRight: '1px solid #eeeeee' }}>
           <ScheduleTime>5:00am</ScheduleTime>
