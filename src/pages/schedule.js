@@ -249,13 +249,10 @@ const IndexPage = ({ data }) => (
           <Class />
           <Empty />
           <Empty />
-          <Empty css={{ height: '17px' }} />
-          <OpenGym css={{ height: '51px' }} />
-          <Group>
-            <OpenGym css={{ flex: 1 }} />
-            <Fit css={{ flex: 1, height: '17px' }} />
-          </Group>
-          <OpenGym />
+          <Empty />
+          <Fit css={{ flex: 1, maxHeight: '17px' }} />
+          <OpenGym css={{ flex: 1 }} />
+          <Class />
           <Group>
             <Class css={{ flex: 1 }} />
             <Kids css={{ flex: 1, marginTop: '8px', height: '26px' }} />
@@ -275,13 +272,10 @@ const IndexPage = ({ data }) => (
           <Class />
           <Empty />
           <Empty />
-          <Empty css={{ height: '17px' }} />
-          <OpenGym css={{ height: '51px' }} />
-          <Group>
-            <OpenGym css={{ flex: 1 }} />
-            <Fit css={{ flex: 1, height: '17px' }} />
-          </Group>
-          <OpenGym />
+          <Empty />
+          <Fit css={{ flex: 1, maxHeight: '17px' }} />
+          <OpenGym css={{ flex: 1 }} />
+          <Class />
           <Group>
             <Class css={{ flex: 1 }} />
             <Kids css={{ flex: 1, marginTop: '8px', height: '26px' }} />
@@ -301,13 +295,10 @@ const IndexPage = ({ data }) => (
           <Class />
           <Empty />
           <Empty />
-          <Empty css={{ height: '17px' }} />
-          <OpenGym css={{ height: '51px' }} />
-          <Group>
-            <OpenGym css={{ flex: 1 }} />
-            <Fit css={{ flex: 1, height: '17px' }} />
-          </Group>
-          <OpenGym />
+          <Empty />
+          <Fit css={{ flex: 1, maxHeight: '17px' }} />
+          <OpenGym css={{ flex: 1 }} />
+          <Class />
           <Group>
             <Class css={{ flex: 1 }} />
             <Kids css={{ flex: 1, marginTop: '8px', height: '26px' }} />
@@ -327,13 +318,10 @@ const IndexPage = ({ data }) => (
           <Class />
           <Empty />
           <Empty />
-          <Empty css={{ height: '17px' }} />
-          <OpenGym css={{ height: '51px' }} />
-          <Group>
-            <OpenGym css={{ flex: 1 }} />
-            <Fit css={{ flex: 1, height: '17px' }} />
-          </Group>
-          <OpenGym />
+          <Empty />
+          <Fit css={{ flex: 1, maxHeight: '17px' }} />
+          <OpenGym css={{ flex: 1 }} />
+          <Class />
           <Group>
             <Class css={{ flex: 1 }} />
             <Kids css={{ flex: 1, marginTop: '8px', height: '26px' }} />
@@ -353,13 +341,10 @@ const IndexPage = ({ data }) => (
           <Class />
           <Empty />
           <Empty />
-          <Empty css={{ height: '17px' }} />
-          <OpenGym css={{ height: '51px' }} />
-          <Group>
-            <OpenGym css={{ flex: 1 }} />
-            <Fit css={{ flex: 1, height: '17px' }} />
-          </Group>
-          <OpenGym />
+          <Empty />
+          <Fit css={{ flex: 1, maxHeight: '17px' }} />
+          <OpenGym css={{ flex: 1 }} />
+          <Class />
           <Group>
             <Class css={{ flex: 1 }} />
             <Kids css={{ flex: 1, marginTop: '8px', height: '26px' }} />
