@@ -13,7 +13,7 @@ const navItemCss = css`
   color: black;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: bold;
   margin-left: 10px;
 
@@ -22,7 +22,7 @@ const navItemCss = css`
   }
 
   @media (max-width: 780px) {
-    font-size: 10px;
+    font-size: 12px;
   }
 `
 
@@ -67,8 +67,8 @@ const LogoContainer = styled(`div`)`
   height: 40px;
 
   @media (max-width: 780px) {
-    width: 35px;
-    height: 20px;
+    width: 50px;
+    height: 30px;
   }
 `
 

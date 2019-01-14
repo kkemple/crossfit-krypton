@@ -65,7 +65,7 @@ export const CoachDescription = styled(`span`)`
   margin-left: auto;
   text-align: center;
   width: 200px;
-  font-size: 12px;
+  font-size: 14px;
 `
 
 export const CoachImg = styled(Img)`

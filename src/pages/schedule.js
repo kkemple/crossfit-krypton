@@ -80,8 +80,9 @@ const Kids = styled(`div`)`
 `
 
 const Empty = styled(`div`)`
-  background-color: #eeeeee;
+  background-color: #ffffff;
   height: 34px;
+  border: 1px solid #eeeeee;
 `
 
 const ScheduleTime = styled(`span`)`
