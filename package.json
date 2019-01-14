@@ -23,6 +23,7 @@
     "gatsby-transformer-sharp": "^2.1.8",
     "mailgun-js": "^0.22.0",
     "netlify-lambda": "^1.1.1",
+    "nuka-carousel": "^4.4.6",
     "query-string": "^6.2.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",

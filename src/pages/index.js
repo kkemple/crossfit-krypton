@@ -2,6 +2,7 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import styled from '@emotion/styled'
+import Carousel from 'nuka-carousel'
 
 import {
   ContentContainer,
@@ -32,12 +33,29 @@ const HeroContainer = styled('div')`
   }
 `
 
-const HeroImage = styled(Img)`
+const HeroImageContainer = styled(`div`)`
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  background-color: black;
+`
+
+const HeroImage = styled(Img)`
+  width: 100%;
+  height: 500px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (max-width: 750px) {
+    height: 400px;
+  }
+
+  @media (max-width: 480px) {
+    height: 300px;
+  }
 `
 
 const HeroImageOverlay = styled(`div`)`
@@ -67,6 +85,11 @@ const GetStartedButton = styled(Link)`
   text-transform: uppercase;
   font-size: 12px;
   border-radius: 3px;
+  display: block;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 16px;
 `
 
 const GetStartedCallout = styled(`div`)`
@@ -121,12 +144,21 @@ const BtwbImageContainer = styled(`div`)`
 const IndexPage = ({ data }) => (
   <Layout>
     <HeroContainer>
-      <HeroImage
-        alt={'Ben Smith snatches 225 pounds.'}
-        fluid={data.heroImage.childImageSharp.fluid}
-      />
+      <HeroImageContainer>
+        <Carousel
+          withoutControls
+          autoplay
+          wrapAround
+          speed={600}
+          autoplayInterval={3000}
+        >
+          {data.sliderImages.edges.map(({ node: image }) => {
+            return <HeroImage fluid={image.childImageSharp.fluid} />
+          })}
+        </Carousel>
+      </HeroImageContainer>
       <HeroImageOverlay />
-      <GetStartedContainer>
+      {/* <GetStartedContainer>
         <ContentContainer>
           <GetStartedCallout>
             <GetStartedTitle>The First Step To Getting Started</GetStartedTitle>
@@ -137,10 +169,10 @@ const IndexPage = ({ data }) => (
             <GetStartedSubTitle>
               Are you ready to be your best?
             </GetStartedSubTitle>
-            <GetStartedButton to="/contact-us">Get Started</GetStartedButton>
+            
           </GetStartedCallout>
         </ContentContainer>
-      </GetStartedContainer>
+      </GetStartedContainer> */}
     </HeroContainer>
     <SectionSpacer />
     <ContentContainer>
@@ -158,6 +190,7 @@ const IndexPage = ({ data }) => (
         if you commit to bringing your best effort and attitude each day, I can
         guarantee that you will exceed any realistic fitness expectations you
         have.
+        <GetStartedButton to="/contact-us">Get Started</GetStartedButton>
       </SectionContent>
       <SectionSpacer />
       <SectionTitle>See What CrossFit Krypton Is All About</SectionTitle>
@@ -179,10 +212,11 @@ const IndexPage = ({ data }) => (
       </SectionSubTitle>
       <Coaches>
         {data.allCoachesJson.edges.map(({ node }) => {
-          const { node: coachImage } = data.allFile.edges.find(
+          const { node: coachImage } = data.coachImages.edges.find(
             ({ node: image }) =>
               image.name.toLowerCase().includes(node.id.toLowerCase())
           )
+          console.log({ coachImage })
           return (
             <Coach key={node.name}>
               <Link to={`/coaches/${node.id}`}>
@@ -239,13 +273,6 @@ export default IndexPage
 
 export const query = graphql`
   query {
-    heroImage: file(relativePath: { eq: "crossfit-krypton-group-photo.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 3200) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
     btwb: file(relativePath: { eq: "beyond-the-whiteboard.png" }) {
       childImageSharp {
         fluid(maxWidth: 800) {
@@ -263,12 +290,24 @@ export const query = graphql`
         }
       }
     }
-    allFile(filter: { name: { regex: "/-coach$/" } }) {
+    coachImages: allFile(filter: { name: { regex: "/-coach$/" } }) {
       edges {
         node {
           name
           childImageSharp {
             fluid(maxWidth: 200) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    }
+    sliderImages: allFile(filter: { name: { regex: "/^slide-show-/" } }) {
+      edges {
+        node {
+          name
+          childImageSharp {
+            fluid(maxWidth: 1200) {
               ...GatsbyImageSharpFluid
             }
           }
