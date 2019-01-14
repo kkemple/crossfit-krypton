@@ -150,7 +150,8 @@ const IndexPage = ({ data }) => (
           autoplay
           wrapAround
           speed={600}
-          autoplayInterval={3000}
+          autoplayInterval={5000}
+          transitionMode="fade"
         >
           {data.sliderImages.edges.map(({ node: image }) => {
             return <HeroImage fluid={image.childImageSharp.fluid} />
