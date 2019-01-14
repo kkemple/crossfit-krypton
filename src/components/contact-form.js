@@ -103,7 +103,7 @@ export default () => (
       /* and other goodies */
     }) => (
       <Form name="contact-us" onSubmit={handleSubmit}>
-        <Message>{errors.name && touched.name && errors.name}</Message>
+        <Message>{errors.name && touched.name}</Message>
         <Input
           placeholder="Name"
           name="name"
@@ -111,7 +111,7 @@ export default () => (
           onBlur={handleBlur}
           value={values.name}
         />
-        <Message>{errors.email && touched.email && errors.email}</Message>
+        <Message>{errors.email && touched.email}</Message>
         <Input
           placeholder="Email"
           type="email"
@@ -120,7 +120,7 @@ export default () => (
           onBlur={handleBlur}
           value={values.email}
         />
-        <Message>{errors.message && touched.message && errors.message}</Message>
+        <Message>{errors.message && touched.message}</Message>
         <TextArea
           name="message"
           onChange={handleChange}
