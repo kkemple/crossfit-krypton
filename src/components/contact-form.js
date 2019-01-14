@@ -102,7 +102,7 @@ export default () => (
       isSubmitting,
       /* and other goodies */
     }) => (
-      <Form name="contact-us" data-netlify="true" onSubmit={handleSubmit}>
+      <Form name="contact-us" onSubmit={handleSubmit}>
         <Message>{errors.name && touched.name && errors.name}</Message>
         <Input
           placeholder="Name"
