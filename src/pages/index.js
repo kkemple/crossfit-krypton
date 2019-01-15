@@ -67,16 +67,6 @@ const HeroImageOverlay = styled(`div`)`
   background-color: rgba(0, 0, 0, 0.2);
 `
 
-const GetStartedContainer = styled(`div`)`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-`
-
 const GetStartedButton = styled(Link)`
   padding: 12px 24px;
   background-color: #cd3c33;
@@ -90,39 +80,6 @@ const GetStartedButton = styled(Link)`
   margin-left: auto;
   margin-right: auto;
   margin-top: 16px;
-`
-
-const GetStartedCallout = styled(`div`)`
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 48px 24px;
-  width: 50%;
-
-  @media (max-width: 900px) {
-    width: 75%;
-  }
-
-  @media (max-width: 750px) {
-    width: 100%;
-    text-align: center;
-    font-size: 14px;
-
-    padding: 24px 12px;
-  }
-`
-
-const GetStartedTitle = styled(`h2`)`
-  color: #cd3c33;
-  margin-bottom: 10px;
-
-  @media (max-width: 750px) {
-    font-size: 20px;
-  }
-`
-
-const GetStartedSubTitle = styled(`h3`)`
-  @media (max-width: 750px) {
-    font-size: 16px;
-  }
 `
 
 const Embed = styled(`iframe`)`
@@ -154,26 +111,13 @@ const IndexPage = ({ data }) => (
           transitionMode="fade"
         >
           {data.sliderImages.edges.map(({ node: image }) => {
-            return <HeroImage fluid={image.childImageSharp.fluid} />
+            return (
+              <HeroImage key={image.name} fluid={image.childImageSharp.fluid} />
+            )
           })}
         </Carousel>
       </HeroImageContainer>
       <HeroImageOverlay />
-      {/* <GetStartedContainer>
-        <ContentContainer>
-          <GetStartedCallout>
-            <GetStartedTitle>The First Step To Getting Started</GetStartedTitle>
-            <p>
-              <b>CrossFit</b> is more than just an effective way to workout and
-              get in shape. It is a way of living life to be your best.
-            </p>
-            <GetStartedSubTitle>
-              Are you ready to be your best?
-            </GetStartedSubTitle>
-            
-          </GetStartedCallout>
-        </ContentContainer>
-      </GetStartedContainer> */}
     </HeroContainer>
     <SectionSpacer />
     <ContentContainer>
@@ -217,7 +161,6 @@ const IndexPage = ({ data }) => (
             ({ node: image }) =>
               image.name.toLowerCase().includes(node.id.toLowerCase())
           )
-          console.log({ coachImage })
           return (
             <Coach key={node.name}>
               <Link to={`/coaches/${node.id}`}>
