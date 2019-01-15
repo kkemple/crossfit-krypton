@@ -64,7 +64,7 @@ export const CoachDescription = styled(`span`)`
   margin-right: auto;
   margin-left: auto;
   text-align: center;
-  width: 200px;
+  width: 215px;
   font-size: 14px;
 `
 

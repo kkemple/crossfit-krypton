@@ -224,7 +224,7 @@ export const query = graphql`
         }
       }
     }
-    allCoachesJson {
+    allCoachesJson(limit: 3) {
       edges {
         node {
           id
