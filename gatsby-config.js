@@ -9,7 +9,7 @@ module.exports = {
       resolve: `gatsby-plugin-netlify-functions`,
       options: {
         functionsSrc: `${__dirname}/src/lambda`,
-        functionsOutput: `${__dirname}/src/functions`,
+        functionsOutput: `${__dirname}/functions`,
       },
     },
     {
