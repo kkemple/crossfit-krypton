@@ -6,6 +6,7 @@
   "dependencies": {
     "@emotion/core": "^10.0.4",
     "@emotion/styled": "^10.0.4",
+    "dotenv": "^6.2.0",
     "emotion": "^10.0.4",
     "emotion-server": "^10.0.4",
     "formik": "^1.4.1",

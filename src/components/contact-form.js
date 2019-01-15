@@ -83,13 +83,19 @@ export default () => (
       }
       return errors
     }}
-    onSubmit={(values, { setSubmitting }) => {
-      fetch(`/.netlify/functions/contact?${createQueryParams(values)}`)
-        .then(response => response.json())
-        .then(json => {
-          alert('form submitted, but not sent, in test mode')
+    onSubmit={(values, { setSubmitting, resetForm }) => {
+      fetch(`/.netlify/functions/contact?${createQueryParams(values)}`).then(
+        response => {
+          if (response.status === 200) {
+            resetForm()
+            alert('Email sent!')
+          } else {
+            alert('Seems something went wrong... Please try again!')
+          }
+
           setSubmitting(false)
-        })
+        }
+      )
     }}
   >
     {({
