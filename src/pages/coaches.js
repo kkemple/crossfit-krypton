@@ -20,7 +20,7 @@ const Section = styled(SectionContent)`
   max-width: 1200px;
 `
 
-const SecondPage = ({ data }) => (
+const CoachesPage = ({ data }) => (
   <Layout>
     <SectionSpacer />
     <ContentContainer>
@@ -55,7 +55,7 @@ const SecondPage = ({ data }) => (
   </Layout>
 )
 
-export default SecondPage
+export default CoachesPage
 
 export const query = graphql`
   query {

@@ -66,7 +66,9 @@ const CoachPage = ({ data: { coachesJson, file } }) => (
                 <Certification>{cert}</Certification>
               ))}
             </CoachCertifications>
-            <Bio>{coachesJson.bio}</Bio>
+            {coachesJson.bio.map(paragraph => (
+              <Bio>{paragraph}</Bio>
+            ))}
           </CoachInfo>
         </Coach>
       </ContentContainer>
