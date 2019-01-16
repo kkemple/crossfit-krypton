@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import { css } from '@emotion/core'
 import styled from '@emotion/styled'
+import { MdOpenInNew } from 'react-icons/md'
 
 import Logo from '../components/logo'
 import ContentContainer from '../components/content-container'
@@ -124,7 +125,7 @@ const Header = ({ siteTitle, showDropShadow }) => (
             target="_blank"
             href="https://crossfitkrypton.sites.zenplanner.com/retail.cfm"
           >
-            Store
+            Store <MdOpenInNew />
           </ExternalNavItem>
           <NavItem activeStyle={activeStyles} to="/contact-us">
             Contact Us
