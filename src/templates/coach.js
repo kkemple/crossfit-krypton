@@ -12,12 +12,22 @@ const CoachImg = styled(Img)`
   border-radius: 50%;
   overflow: hidden;
   border: 2px solid #cd3c33;
+
+  @media (max-width: 780px) {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 24px;
+  }
 `
 
 const Coach = styled(`div`)`
   display: flex;
   align-items: center;
   justify-content: flex-start;
+
+  @media (max-width: 780px) {
+    flex-direction: column;
+  }
 `
 
 const CoachInfo = styled(`div`)`
@@ -41,7 +51,6 @@ const Certification = styled(`li`)`
 `
 
 const Bio = styled(`p`)`
-  font-weight: bold;
   font-size: 14px;
 `
 
@@ -51,6 +60,14 @@ const Container = styled(`div`)`
   align-items: center;
   height: calc(100vh - 200px);
   min-height: 450px;
+
+  @media (max-width: 780px) {
+    min-height: 0;
+    justify-content: flex-start;
+    flex-direction: column;
+    height: auto;
+    margin-top: 75px;
+  }
 `
 
 const CoachPage = ({ data: { coachesJson, file } }) => (
