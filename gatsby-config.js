@@ -1,17 +1,23 @@
+var proxy = require('http-proxy-middleware')
+
 module.exports = {
+  developMiddleware: app => {
+    app.use(
+      '/.netlify/functions/',
+      proxy({
+        target: 'http://localhost:9000',
+        pathRewrite: {
+          '/.netlify/functions/': '',
+        },
+      })
+    )
+  },
   siteMetadata: {
     title: 'CrossFit Krypton',
   },
   plugins: [
     'gatsby-transformer-json',
     'gatsby-plugin-react-helmet',
-    {
-      resolve: `gatsby-plugin-netlify-functions`,
-      options: {
-        functionsSrc: `${__dirname}/src/lambda`,
-        functionsOutput: `${__dirname}/functions`,
-      },
-    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
