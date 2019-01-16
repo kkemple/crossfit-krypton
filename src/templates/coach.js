@@ -36,6 +36,10 @@ const CoachInfo = styled(`div`)`
   padding-left: 32px;
   border-left: 1px solid #cd3c33;
   padding-top: 16px;
+
+  @media (max-width: 780px) {
+    margin-left: 0;
+  }
 `
 
 const CoachCertifications = styled(`ul`)`
