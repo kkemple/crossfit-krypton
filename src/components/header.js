@@ -64,8 +64,8 @@ const FlexContainer = styled(`div`)`
 `
 
 const LogoContainer = styled(`div`)`
-  width: 70px;
-  height: 40px;
+  width: 80px;
+  height: 45px;
 
   @media (max-width: 780px) {
     width: 50px;
