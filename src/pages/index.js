@@ -45,7 +45,7 @@ const HeroImageContainer = styled(`div`)`
 const HeroImage = styled(Img)`
   width: 100%;
   height: 500px;
-  max-width: 1200px;
+  max-width: 2000px;
   margin-left: auto;
   margin-right: auto;
 
@@ -251,7 +251,7 @@ export const query = graphql`
         node {
           name
           childImageSharp {
-            fluid(maxWidth: 1200) {
+            fluid(maxWidth: 2000) {
               ...GatsbyImageSharpFluid
             }
           }
