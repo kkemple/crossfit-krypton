@@ -7,9 +7,9 @@
   },
   {
     "id": "unlimited-autopay",
-    "title": "Krypton Unlimited (Autopay)",
+    "title": "Krypton Unlimited Year",
     "rate": "$130/month",
-    "notes": "Get a 20$/month discount by signing up for auto pay!"
+    "notes": "Get $20/month discount for signing up for a yearly membership with Autopay!"
   },
   {
     "id": "lite",
@@ -34,6 +34,12 @@
     "title": "Krypton Family",
     "rate": "$280/month",
     "notes": "Unlimited programs include KRYPTON Fit, Yoga, Open Gym and complimentary access to Beyond The Whiteboard!"
+  },
+  {
+    "id": "drop-in",
+    "title": "Drop Ins",
+    "rate": "$15/visit",
+    "notes": "We love drop ins! Please give us a heads up through email that you are coming! See you soon!"
   },
   {
     "id": "blueprint",

@@ -14,9 +14,9 @@ const navItemCss = css`
   color: black;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: bold;
-  margin-left: 10px;
+  margin-left: 20px;
 
   :active {
     color: #cd3c33;
@@ -41,7 +41,7 @@ const Container = styled(`div`)`
   top: 0;
   left: 0;
   right: 0;
-  height: 64px;
+  height: 90px;
   align-items: center;
 
   @media (max-width: 780px) {
@@ -64,8 +64,8 @@ const FlexContainer = styled(`div`)`
 `
 
 const LogoContainer = styled(`div`)`
-  width: 80px;
-  height: 45px;
+  width: 100px;
+  height: 60px;
 
   @media (max-width: 780px) {
     width: 50px;

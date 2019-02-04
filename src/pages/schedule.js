@@ -357,7 +357,8 @@ const IndexPage = ({ data }) => (
           <Empty />
           <Empty />
           <Empty />
-          <Empty />
+          <Fit css={{ height: '17px' }} />
+          <Empty css={{ height: '17px' }} />
           <Empty />
           <OpenGym />
           <OpenGym />

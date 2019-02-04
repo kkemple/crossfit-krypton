@@ -15,7 +15,7 @@ const ContactUsPage = () => (
       <SectionSpacer />
       <SectionTitle>Get In Touch</SectionTitle>
       <SectionSubTitle>We'd love to hear from you!</SectionSubTitle>
-      <SectionSpacer />
+      <div style={{ height: '32px' }} />
       <ContactForm />
     </ContentContainer>
   </Layout>

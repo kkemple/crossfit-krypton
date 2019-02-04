@@ -3,13 +3,13 @@ import { Formik } from 'formik'
 import { css } from '@emotion/core'
 import styled from '@emotion/styled'
 import queryString from 'query-string'
+import { MdPhone, MdLocationOn } from 'react-icons/md'
 
 const baseInputStyles = css`
   border-radius: 2px;
   box-sizing: border-box;
   display: block;
   padding: 4px 8px;
-  max-width: 600px;
   border: 1px solid #888888;
   border-radius: 3px;
   color: #cd3c33;
@@ -43,6 +43,8 @@ const Form = styled(`form`)`
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 600px;
+  margin: auto;
 `
 
 const Message = styled(`span`)`
@@ -109,6 +111,12 @@ export default () => (
       /* and other goodies */
     }) => (
       <Form name="contact-us" onSubmit={handleSubmit}>
+        <div style={{ alignSelf: 'flex-start' }}>
+          <MdPhone /> 757-612-1222
+        </div>
+        <div style={{ alignSelf: 'flex-start', marginBottom: '32px' }}>
+          <MdLocationOn /> 105 Bruton Ct. Chesapeake, VA 23322
+        </div>
         <Message>{errors.name && touched.name}</Message>
         <Input
           placeholder="Name"

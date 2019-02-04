@@ -15,7 +15,7 @@ export const SectionSubTitle = styled(`h4`)`
   text-transform: uppercase;
 `
 
-export const SectionTitle = styled(`h3`)`
+export const SectionTitle = styled(`h2`)`
   text-align: center;
   margin-bottom: 10px;
 
@@ -38,7 +38,7 @@ export const SectionContent = styled(`div`)`
 
 export const SectionSpacer = styled(`div`)`
   width: 100%;
-  padding: 32px 0;
+  padding: 64px 0;
 `
 
 export const Coaches = styled(`div`)`

@@ -21,7 +21,7 @@ const Page = styled(`div`)`
 
 const Content = styled(`div`)`
   flex: 1;
-  padding-top: 64px;
+  padding-top: 90px;
   padding-bottom: 64px;
 `
 
