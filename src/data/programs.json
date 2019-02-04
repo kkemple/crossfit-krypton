@@ -39,13 +39,20 @@
     "id": "drop-in",
     "title": "Drop Ins",
     "rate": "$15/visit",
-    "notes": "We love drop ins! Please give us a heads up through email that you are coming! See you soon!"
+    "notes": "We love drop ins! Please give us a heads up through email that you are coming! See you soon!",
+    "action": {
+      "type": "external-link",
+      "payload": {
+        "href": "https://waiver.smartwaiver.com/w/540f6dbf35ea8/web/",
+        "text": "Sign Waiver"
+      }
+    }
   },
   {
     "id": "blueprint",
     "title": "Online - Ben Smith Blueprint",
     "rate": "$50/month",
-    "notes": "Looking for an online program? This programming is FOR BOTH: COMPETITIVE CROSSFIT ATHLETES: looking to improve performance in the open, regionals, or local competitions.  These workouts are designed based off of Ben Smith’s personal daily programming. EVERYDAY CROSSFIT ATHLETES: looking to follow a proven programming structure designed to improve overall fitness (a balance between strength, gymnastics skills, olympic lifting, running, rowing, and other endurance work). Scaling options for each workout can also be provided upon request. * The daily workouts will be available on BEYOND THE WHITEBOARD.",
+    "notes": "Looking for an online program? The Blueprint is Ben Smith’s personal daily programming. Whether you are an aspiring CrossFit athlete, an everyday CrossFit athlete, workout from home, or an Affiliate looking to follow a proven programming structure designed to improve overall fitness (a balance between strength, gymnastics skills, olympic lifting, running, rowing, and other endurance work), we have the programming for you! Checkout more in the link below! Scaling options for each workout can also be provided upon request. * The daily workouts will be available on Beyond The Whiteboard and include a membership to BTWB.",
     "action": {
       "type": "external-link",
       "payload": {
