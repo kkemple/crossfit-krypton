@@ -102,7 +102,7 @@ const ScheduleTime = styled(`span`)`
 `
 
 const Group = styled(`div`)`
-  background-color: #eeeeee;
+  background-color: #ffffff;
   display: flex;
   align-items: stretch;
   justify-content: space-between;
