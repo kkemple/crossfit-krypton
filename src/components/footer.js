@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import { StaticQuery, Link, graphql } from 'gatsby'
+import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
 import { ContentContainer } from './index'
@@ -72,12 +72,12 @@ export default () => (
                 image.name.toLowerCase().includes(node.id.toLowerCase())
             )
             return (
-              <Link key={node.id} to={node.link}>
+              <a key={node.id} href={node.link}>
                 <SponsorImg
                   alt={node.name}
                   fluid={sponsorImage.childImageSharp.fluid}
                 />
-              </Link>
+              </a>
             )
           })}
         </Sponsors>
