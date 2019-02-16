@@ -59,5 +59,12 @@
     "bio": [
       "Vincent Gary is a Chesapeake native and was an avid baseball player growing up. He loves sports and has his Master’s Degree in Sports Management from Old Dominion University. For those who know Vince, they know he is a family man (wife and 3 kids) and LOVES old school bodybuilding and lifting. Vince discovered CrossFit in 2009 and has competed in various CrossFit competitions. Vince believes there is so much to learn in CrossFit and so many levels to achieve that the process of learning and growing will never end. He believes as a \"Coach\", he has the privilege of being there to help people discover their true potential."
     ]
+  },
+  {
+    "id": "dane-smith",
+    "name": "Dane Smith",
+    "certifications": ["CrossFit Level 1 Trainer"],
+    "short": "Dane does.",
+    "bio": ["Dane does."]
   }
 ]
