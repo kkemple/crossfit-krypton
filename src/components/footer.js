@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
-import { ContentContainer } from './index'
+import ContentContainer from './content-container'
 
 const query = graphql`
   query {
