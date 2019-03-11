@@ -112,7 +112,7 @@ export default () => (
     }) => (
       <Form name="contact-us" onSubmit={handleSubmit}>
         <div style={{ alignSelf: 'flex-start' }}>
-          <MdPhone /> 757-612-1222
+          <MdPhone /> 757-613-1222
         </div>
         <div style={{ alignSelf: 'flex-start', marginBottom: '32px' }}>
           <MdLocationOn /> 105 Bruton Ct. Chesapeake, VA 23322
