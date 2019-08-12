@@ -37,10 +37,10 @@ const Section = styled(`div`)`
   text-align: center;
 `
 
-const ProgramsPage = ({ data }) => (
+const MembershipsPage = ({ data }) => (
   <Layout>
     <ContentContainer>
-      {data.allProgramsJson.edges.map(({ node }) => {
+      {data.allMembershipsJson.edges.map(({ node }) => {
         return (
           <Section key={node.id}>
             <SectionSpacer />
@@ -60,11 +60,11 @@ const ProgramsPage = ({ data }) => (
   </Layout>
 )
 
-export default ProgramsPage
+export default MembershipsPage
 
 export const query = graphql`
   query {
-    allProgramsJson {
+    allMembershipsJson {
       edges {
         node {
           id

@@ -112,14 +112,14 @@ const Header = ({ siteTitle, showDropShadow }) => (
           <NavItem activeStyle={activeStyles} to="/">
             Home
           </NavItem>
-          <NavItem activeStyle={activeStyles} to="/programs">
-            Programs
+          <NavItem activeStyle={activeStyles} to="/memberships">
+            Memberships
           </NavItem>
-          <NavItem activeStyle={activeStyles} to="/coaches">
-            Coaches
+          <NavItem activeStyle={activeStyles} to="/online-programming">
+            Online Programming
           </NavItem>
-          <NavItem activeStyle={activeStyles} to="/schedule">
-            Schedule
+          <NavItem activeStyle={activeStyles} to="/about">
+            About
           </NavItem>
           <ExternalNavItem
             target="_blank"
@@ -127,9 +127,6 @@ const Header = ({ siteTitle, showDropShadow }) => (
           >
             Store <MdOpenInNew />
           </ExternalNavItem>
-          <NavItem activeStyle={activeStyles} to="/contact-us">
-            Contact Us
-          </NavItem>
         </Nav>
       </FlexContainer>
     </ContentContainer>
