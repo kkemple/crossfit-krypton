@@ -19,6 +19,12 @@ module.exports = {
     'gatsby-transformer-json',
     'gatsby-plugin-react-helmet',
     {
+      resolve: `gatsby-source-instagram`,
+      options: {
+        username: `thebensmithblueprint`,
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
