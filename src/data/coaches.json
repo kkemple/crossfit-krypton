@@ -64,7 +64,33 @@
     "id": "dane-smith",
     "name": "Dane Smith",
     "certifications": ["CrossFit Level 1 Trainer"],
-    "short": "Dane does.",
-    "bio": ["Dane does."]
+    "short": "Dane Smith is a 3x Regional Athlete and CrossFit Level 1 trainer.",
+    "bio": [
+      "Dane Smith is a Three-Time Atlantic Regional Athlete and one of the most fun Crossfit Athletes in the World to watch compete. Dane’s 100%, all out mentality makes him a ferocious competitor on the field, and an inspiration to those he coaches to bring their best effort daily. At 23 yearsyoung, Dane is one of our younger, Level 1 certified, coaches but brings a tremendous amount of energy, enthusiasm and hands on knowledge to every class. With a genuine concern for the betterment of his students, Dane is always willing to go the extra mile to improve the performance and well-being of our members.",
+      "Dane is a 2014 graduate of Great Bridge High School where he earned 1st Team All-State in baseball and helped his team win the state championship. He has an Associate’s degree in Fire Science and is currently working on his EMT certification."
+    ]
+  },
+  {
+    "id": "tina-boyles",
+    "name": "Tina Boyles",
+    "certifications": [
+      "CrossFit Level 1 Trainer",
+      "USAW Level 1 Sports Performance Coach",
+      "M|WOD Movement and Mobility Specialist"
+    ],
+    "short": "Tina Boyles is CrossFit Level 1 trainer and USAW Level 1 Sports Performance coach.",
+    "bio": [
+      "Tina’s passion for CrossFit comes from the ability to utilize one hour of functional fitness to accomplish her personal goals, both physically and mentally. From keeping up with small children to working with Search and Rescue, she believes everything is possible with a supportive community who inspire strength, confidence, and camaraderie. Regardless of age, goals, or fitness level, Tina loves helping athletes acquire the skills needed to make their ambitions a success! Throughout several military relocations, she continues to gain education and experience through competitions, coaching, and fellow athletes. She looks forward to continuing her journey and helping others succeed on theirs!"
+    ]
+  },
+  {
+    "id": "josh-vales",
+    "name": "Josh Vales",
+    "certifications": ["CrossFit Level 1 Trainer"],
+    "short": "Josh Vales is CrossFit Level 1 trainer and has been doing it passionately since 2013.",
+    "bio": [
+      "Josh Vales is a Level 1 certified CrossFit coach. He grew up playing baseball and continued playing into college. He attended a junior college for two years prior to transferring to Norfolk State University.  He was a two way baseball player in junior college before focusing on pitching at NSU. He discovered CrossFit during the beginning of his time at NSU and has done it since. He recently graduated from nursing school in May of 2019 and is currently a PICU nurse at CHKD.",
+      "Josh has been active throughout life with baseball and running before jumping into the fitness world once he graduated from high school. He has been doing CrossFit since 2013. Josh likes that with CrossFit, there’s a workout for everyone, no matter the skill level, that will challenge the person physically and mentally."
+    ]
   }
 ]

@@ -21,6 +21,16 @@ const Section = styled(SectionContent)`
   max-width: 1200px;
 `
 
+const SectionDivider = styled(`div`)`
+  height: 2px;
+  margin-top: 64px;
+  background-color: #cd3c33;
+  width: 300px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+`
+
 const ScheduleLabels = styled(`div`)`
   display: flex;
   align-items: stretch;
@@ -134,7 +144,7 @@ const AboutPage = ({ data }) => (
   <Layout>
     <SectionSpacer />
     <ContentContainer>
-      <SectionTitle>Meet the Coaches</SectionTitle>
+      <SectionTitle id="coaches">Meet the Coaches</SectionTitle>
       <SectionSubTitle>
         INCLUDING THE 2015 CROSSFIT GAMES CHAMPION BEN SMITH
       </SectionSubTitle>
@@ -160,8 +170,9 @@ const AboutPage = ({ data }) => (
           })}
         </Coaches>
       </Section>
+      <SectionDivider />
       <SectionSpacer />
-      <SectionTitle>Schedule</SectionTitle>
+      <SectionTitle id="schedule">Schedule</SectionTitle>
       <SectionSubTitle>
         Schedule subject to change, always reach out to us around holidays!
       </SectionSubTitle>
@@ -428,8 +439,9 @@ const AboutPage = ({ data }) => (
           <Empty />
         </ScheduleRow>
       </Schedule>
+      <SectionDivider />
       <SectionSpacer />
-      <SectionTitle>Get In Touch</SectionTitle>
+      <SectionTitle id="contact">Get In Touch</SectionTitle>
       <SectionSubTitle>We'd love to hear from you!</SectionSubTitle>
       <div style={{ height: '32px' }} />
       <ContactForm />
