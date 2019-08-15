@@ -5,7 +5,6 @@ import { FaInstagram } from 'react-icons/fa'
 import {
   ContentContainer,
   SectionContent,
-  SectionSpacer,
   SectionTitle,
   Layout,
   Coaches,
@@ -38,10 +37,6 @@ const Section = styled(`div`)`
   text-align: center;
 `
 
-const TitleWithMargin = styled(SectionTitle)`
-  margin-bottom: 24px;
-`
-
 const InstaIcon = styled(FaInstagram)`
   font-size: 64px;
   margin-top: 24px;
@@ -51,9 +46,9 @@ const OnlineProgrammingPage = ({ data }) => (
   <Layout>
     <ContentContainer>
       <Section>
-        <SectionSpacer />
-        <SectionTitle>Ben Smith Blueprint</SectionTitle>
-        {/* <SectionDivider /> */}
+        <SectionTitle css={{ marginTop: '32px' }}>
+          Ben Smith Blueprint
+        </SectionTitle>
         <SectionContent css={{ marginTop: '24px', marginBottom: '24px' }}>
           Looking for an online program? The Blueprint is Ben Smith’s personal
           daily programming. Whether you are an aspiring CrossFit athlete, an
