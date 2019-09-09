@@ -22,6 +22,10 @@ const navItemCss = css`
     color: #cd3c33;
   }
 
+  @media (max-width: 1000px) {
+    font-size: 14px;
+  }
+
   @media (max-width: 780px) {
     font-size: 12px;
   }
@@ -44,7 +48,7 @@ const Container = styled(`div`)`
   height: 90px;
   align-items: center;
 
-  @media (max-width: 780px) {
+  @media (max-width: 1000px) {
     height: auto;
   }
 `
@@ -54,7 +58,7 @@ const FlexContainer = styled(`div`)`
   align-items: center;
   justify-content: space-between;
 
-  @media (max-width: 780px) {
+  @media (max-width: 1000px) {
     flex-direction: column;
     align-items: center;
     padding-top: 8px;
@@ -67,7 +71,7 @@ const LogoContainer = styled(`div`)`
   width: 100px;
   height: 60px;
 
-  @media (max-width: 780px) {
+  @media (max-width: 1000px) {
     width: 50px;
     height: 30px;
   }
@@ -77,7 +81,7 @@ const Nav = styled(`nav`)`
   display: flex;
   align-items: center;
 
-  @media (max-width: 780px) {
+  @media (max-width: 1000px) {
     flex-wrap: wrap;
     justify-content: center;
   }

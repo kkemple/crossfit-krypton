@@ -108,7 +108,6 @@ export default () => (
       handleBlur,
       handleSubmit,
       isSubmitting,
-      /* and other goodies */
     }) => (
       <Form name="contact-us" onSubmit={handleSubmit}>
         <div style={{ alignSelf: 'flex-start' }}>

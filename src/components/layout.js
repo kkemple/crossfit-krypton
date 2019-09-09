@@ -23,6 +23,14 @@ const Content = styled(`div`)`
   flex: 1;
   padding-top: 90px;
   padding-bottom: 64px;
+
+  @media (max-width: 1000px) {
+    padding-top: 70px;
+  }
+
+  @media (max-width: 635px) {
+    padding-top: 90px;
+  }
 `
 
 class Layout extends Component {

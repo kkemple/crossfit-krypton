@@ -54,10 +54,21 @@ const Sponsors = styled(`div`)`
   padding: 16px 0;
   width: 100%;
   margin-bottom: 32px;
+  flex-wrap: wrap;
 `
 
 const SponsorImg = styled(Img)`
   width: 150px;
+`
+
+const Newsletter = styled(`p`)`
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+
+  a {
+    color: #cd3c33;
+  }
 `
 
 export default () => (
@@ -65,6 +76,10 @@ export default () => (
     query={query}
     render={data => (
       <Container>
+        <Newsletter>
+          Sign up for the{' '}
+          <a href="http://eepurl.com/gw9TcP">Krypton newsletter</a>!
+        </Newsletter>
         <Sponsors>
           {data.allSponsorsJson.edges.map(({ node }) => {
             const { node: sponsorImage } = data.allFile.edges.find(
