@@ -125,6 +125,7 @@ const StyledDialog = styled(DialogOverlay)`
   display: none;
   opacity: 0;
   transition: opacity 1s ease;
+  width: 70vw;
 `
 
 const IndexPage = ({ data }) => {
