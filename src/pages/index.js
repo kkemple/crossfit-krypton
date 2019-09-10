@@ -125,7 +125,6 @@ const StyledDialog = styled(DialogOverlay)`
   display: none;
   opacity: 0;
   transition: opacity 1s ease;
-  width: 70vw;
 `
 
 const IndexPage = ({ data }) => {
@@ -249,7 +248,9 @@ const IndexPage = ({ data }) => {
             : {}
         }
       >
-        <DialogContent style={{ position: 'relative', borderRadius: '4px' }}>
+        <DialogContent
+          style={{ position: 'relative', borderRadius: '4px', width: '70vw' }}
+        >
           <CloseDialogButton onClick={() => setShowNewsletterDialog(false)}>
             X
           </CloseDialogButton>
