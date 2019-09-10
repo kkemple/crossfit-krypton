@@ -6,6 +6,7 @@
   "dependencies": {
     "@emotion/core": "^10.0.4",
     "@emotion/styled": "^10.0.4",
+    "@reach/dialog": "^0.2.9",
     "dotenv": "^6.2.0",
     "emotion": "^10.0.4",
     "emotion-server": "^10.0.4",
@@ -32,6 +33,7 @@
     "react-dom": "^16.6.3",
     "react-helmet": "^5.2.0",
     "react-icons": "^3.3.0",
+    "react-spring": "^8.0.27",
     "slash": "^2.0.0"
   },
   "keywords": [
