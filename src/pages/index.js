@@ -122,9 +122,7 @@ const BtwbImageContainer = styled(`div`)`
 `
 
 const StyledDialog = styled(DialogOverlay)`
-  display: none;
-  opacity: 0;
-  transition: opacity 1s ease;
+  z-index: 999;
 `
 
 const IndexPage = ({ data }) => {
@@ -237,33 +235,25 @@ const IndexPage = ({ data }) => {
           allowfullscreen
         />
       </ContentContainer>
-      <StyledDialog
-        css={
-          showNewsletterDialog
-            ? css`
-                display: block;
-                z-index: 999;
-                opacity: 1;
-              `
-            : {}
-        }
-      >
-        <DialogContent
-          style={{ position: 'relative', borderRadius: '4px', width: '70vw' }}
-        >
-          <CloseDialogButton onClick={() => setShowNewsletterDialog(false)}>
-            X
-          </CloseDialogButton>
-          <SectionTitle>Don't Miss Out!</SectionTitle>
-          <SectionSubTitle>
-            Sign up for the Krypton newsletter to stay in the know about
-            everything from training camps to class times!
-          </SectionSubTitle>
-          <NewsLetterButton href="http://eepurl.com/gw9TcP">
-            Sign Up Now
-          </NewsLetterButton>
-        </DialogContent>
-      </StyledDialog>
+      {showNewsletterDialog && (
+        <StyledDialog>
+          <DialogContent
+            style={{ position: 'relative', borderRadius: '4px', width: '70vw' }}
+          >
+            <CloseDialogButton onClick={() => setShowNewsletterDialog(false)}>
+              X
+            </CloseDialogButton>
+            <SectionTitle>Don't Miss Out!</SectionTitle>
+            <SectionSubTitle>
+              Sign up for the Krypton newsletter to stay in the know about
+              everything from training camps to class times!
+            </SectionSubTitle>
+            <NewsLetterButton href="http://eepurl.com/gw9TcP">
+              Sign Up Now
+            </NewsLetterButton>
+          </DialogContent>
+        </StyledDialog>
+      )}
     </Layout>
   )
 }
