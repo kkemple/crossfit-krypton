@@ -92,5 +92,24 @@
       "Josh Vales is a Level 1 certified CrossFit coach. He grew up playing baseball and continued playing into college. He attended a junior college for two years prior to transferring to Norfolk State University.  He was a two way baseball player in junior college before focusing on pitching at NSU. He discovered CrossFit during the beginning of his time at NSU and has done it since. He recently graduated from nursing school in May of 2019 and is currently a PICU nurse at CHKD.",
       "Josh has been active throughout life with baseball and running before jumping into the fitness world once he graduated from high school. He has been doing CrossFit since 2013. Josh likes that with CrossFit, there’s a workout for everyone, no matter the skill level, that will challenge the person physically and mentally."
     ]
+  },
+  {
+    "id": "nicky-crais",
+    "name": "Nicky Crais",
+    "certifications": ["CrossFit Level 1 Trainer", "CrossFit Level 2 Trainer"],
+    "short": "Nicky Crais is a CrossFit Level 1 and CrossFit Level 2 trainer.",
+    "bio": [
+      "Nicky Crais is a mother to two girls and a military spouse. Nicky grew up in Minnesota playing volleyball, basketball and softball. After 2 years of playing collegiate sports, she concentrated on completing her Bachelors degree in Athletic Training and Exercise Science and her Masters in Healthcare Administration.",
+      "Nicky’s passion for teaching fitness started right after college. With numerous military moves, she finds ways to connect to the community through fitness. Nicky is a Master’s Athlete who has qualified for the Age Group online qualifier3 times and was on the Crossfit Krypton Regional Team in 2015?(I think that was the year). Nicky was also the fittest woman in Kenya in 2018."
+    ]
+  },
+  {
+    "id": "lindsey-jacoby",
+    "name": "Lindsey Jacoby",
+    "certifications": ["CrossFit Level 1 Trainer"],
+    "short": "Lindsey Jacoby is a CrossFit Level 1 trainer and regional qualifier.",
+    "bio": [
+      "Lindsey found CrossFit in 2007, after being an avid runner for years. She has 3 active kids that keep her busy with their various sports and activities. She’s been a CrossFit coach since 2010, and started competing in 2013 after moving to VA from Alaska. Joining CrossFit Krypton in 2015 earned her a spot to regionals in 2016, 2017, and with a team in 2018. She loves the Krypton community and the sense of family they bring to her and her kids!! And the Krypton community loves her hilarious jokes and sense of humor!"
+    ]
   }
 ]
