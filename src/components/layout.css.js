@@ -1,4 +1,5 @@
 import { css } from '@emotion/core'
+import 'typeface-pt-sans'
 
 export default css`
   html {
@@ -202,7 +203,7 @@ export default css`
   }
   body {
     color: hsla(0, 0%, 0%, 0.8);
-    font-family: Roboto, serif;
+    font-family: Pt Sans, serif;
     font-weight: normal;
     word-wrap: break-word;
     font-kerning: normal;
@@ -232,7 +233,7 @@ export default css`
     padding-top: 0;
     margin-bottom: 1.45rem;
     color: inherit;
-    font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    font-family: PT Sans, -apple-system, BlinkMacSystemFont, Segoe UI, PT Sans,
       Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
       sans-serif;
     font-weight: bold;
@@ -250,7 +251,7 @@ export default css`
     padding-top: 0;
     margin-bottom: 1.45rem;
     color: inherit;
-    font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    font-family: PT Sans, -apple-system, BlinkMacSystemFont, Segoe UI, PT Sans,
       Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
       sans-serif;
     font-weight: bold;
@@ -268,7 +269,7 @@ export default css`
     padding-top: 0;
     margin-bottom: 1.45rem;
     color: inherit;
-    font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    font-family: PT Sans, -apple-system, BlinkMacSystemFont, Segoe UI, PT Sans,
       Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
       sans-serif;
     font-weight: bold;
@@ -286,7 +287,7 @@ export default css`
     padding-top: 0;
     margin-bottom: 1.45rem;
     color: inherit;
-    font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    font-family: PT Sans, -apple-system, BlinkMacSystemFont, Segoe UI, PT Sans,
       Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
       sans-serif;
     font-weight: bold;
@@ -304,7 +305,7 @@ export default css`
     padding-top: 0;
     margin-bottom: 1.45rem;
     color: inherit;
-    font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    font-family: PT Sans, -apple-system, BlinkMacSystemFont, Segoe UI, PT Sans,
       Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
       sans-serif;
     font-weight: bold;
@@ -322,7 +323,7 @@ export default css`
     padding-top: 0;
     margin-bottom: 1.45rem;
     color: inherit;
-    font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    font-family: PT Sans, -apple-system, BlinkMacSystemFont, Segoe UI, PT Sans,
       Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
       sans-serif;
     font-weight: bold;
