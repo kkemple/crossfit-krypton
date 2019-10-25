@@ -116,9 +116,9 @@ const Header = ({ siteTitle, showDropShadow }) => (
           <NavItem activeStyle={activeStyles} to="/">
             Home
           </NavItem>
-          <NavItem activeStyle={activeStyles} to="/training-camp">
+          {/* <NavItem activeStyle={activeStyles} to="/training-camp">
             Training Camp
-          </NavItem>
+          </NavItem> */}
           <NavItem activeStyle={activeStyles} to="/memberships">
             Memberships
           </NavItem>
