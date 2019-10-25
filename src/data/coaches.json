@@ -101,12 +101,13 @@
       "CrossFit Level 2 Trainer",
       "CrossFit Gymnastics"
     ],
-    "short": "Georgie Brain is CrossFit Level 2 trainer and is passionate about finding new ways to help members accomplish goals.",
+    "short": "Georgie Brain is CrossFit Level 2 and CrossFit Gymnastics trainer.",
     "bio": [
       "Georgie graduated from University of Florida in 2002 with a degree in Criminology, and went on to earn her Masters in the same subject from Texas State University in 2010. A year later, she moved to Virginia with her husband, a Navy aviator, and they quickly found CrossFit while looking for a new way to lose weight and stay fit. Nothing about CrossFit came easy to Georgie, and she found everything from running to pull-up to be terrifying and overwhelming.",
       "Two years into her CrossFit journey, Georgie came to CrossFit Krypton and immediately knew she’d found a special place where she could not only realize her potential, but excel. In 2014 Georgie’s role at the gym grew when she took on an administrative position, and even today is still the first face most people will see when they come through the door. After finding her own success in transforming her lifestyle and achieving her fitness goals, Georgie realized she wanted to help other people on the same journey. She believes it is never too late to start living a healthier lifestyle and is passionate about finding new ways to help members accomplish goals."
-    },
-    {
+    ]
+  },
+  {
     "id": "nicky-crais",
     "name": "Nicky Crais",
     "certifications": ["CrossFit Level 1 Trainer", "CrossFit Level 2 Trainer"],
