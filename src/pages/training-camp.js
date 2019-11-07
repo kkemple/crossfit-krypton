@@ -39,8 +39,7 @@ const TrainingCamp = ({ data }) => (
     <ContentContainer>
       <Section>
         <SectionTitle>
-          Join us for CrossFit Krypton’s very first Training Camp on September
-          28th and 29th
+          Join us for CrossFit Krypton’s next training camp, in January 2020.
         </SectionTitle>
         <SectionSubTitle>
           Learn, be coached, train hard, and hangout for two days with Ben
@@ -67,7 +66,7 @@ export default TrainingCamp
 export const query = graphql`
   {
     trainingCampImg: file(
-      relativePath: { regex: "/training-camp-billboard/" }
+      relativePath: { regex: "/training-camp-billboard.png/" }
     ) {
       childImageSharp {
         fluid {
