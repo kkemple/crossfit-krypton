@@ -39,7 +39,8 @@ const TrainingCamp = ({ data }) => (
     <ContentContainer>
       <Section>
         <SectionTitle>
-          Join us for CrossFit Krypton’s next training camp, in January 2020.
+          Join us for CrossFit Krypton’s next training camp, January 18th -
+          19th.
         </SectionTitle>
         <SectionSubTitle>
           Learn, be coached, train hard, and hangout for two days with Ben
@@ -53,9 +54,9 @@ const TrainingCamp = ({ data }) => (
           </ExternalLink>
           .
         </SectionContent>
-        <Button href="https://crossfitkrypton.sites.zenplanner.com/event.cfm?eventId=4A882120-69B9-4E59-AA3F-F33EF7B968D0">
+        {/* <Button href="https://crossfitkrypton.sites.zenplanner.com/event.cfm?eventId=4A882120-69B9-4E59-AA3F-F33EF7B968D0">
           Learn More
-        </Button>
+        </Button> */}
       </Section>
     </ContentContainer>
   </Layout>
