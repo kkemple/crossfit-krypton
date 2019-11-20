@@ -36,6 +36,12 @@
     "notes": "Unlimited programs include KRYPTON Fit, Yoga, Open Gym and complimentary access to Beyond The Whiteboard!"
   },
   {
+    "id": "athletics",
+    "title": "Krypton Athletics",
+    "rate": "$135/month",
+    "notes": "Krypton Athletics is a strength and conditioning program specifically designed for athletes looking to develop power, speed, and agility to transfer over to their specific sport."
+  },
+  {
     "id": "drop-in",
     "title": "Drop Ins",
     "rate": "$15/visit",
