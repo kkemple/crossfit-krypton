@@ -89,6 +89,12 @@ const Fit = styled(`div`)`
   border: 1px solid #eeeeee;
 `
 
+const Athletics = styled(`div`)`
+  background-color: #9b59b6;
+  height: 34px;
+  border: 1px solid #eeeeee;
+`
+
 const OpenGym = styled(`div`)`
   background-color: black;
   height: 34px;
@@ -244,6 +250,21 @@ const AboutPage = ({ data }) => (
             Kids
           </span>
         </div>
+        <div css={{ display: 'flex', alignItems: 'center' }}>
+          <div
+            css={{
+              width: '12px',
+              height: '12px',
+              backgroundColor: '#9b59b6',
+              marginRight: '4px',
+              display: 'inline-block',
+              borderRadius: '50%',
+            }}
+          />
+          <span css={{ fontSize: '12px', textTransform: 'uppercase' }}>
+            Athletics
+          </span>
+        </div>
       </ScheduleLegend>
       <ScheduleLabels>
         <ScheduleRow />
@@ -303,11 +324,12 @@ const AboutPage = ({ data }) => (
           <Fit css={{ flex: 1, maxHeight: '17px' }} />
           <OpenGym css={{ flex: 1 }} />
           <Class />
+          <Class />
           <Group>
             <Class css={{ flex: 1 }} />
-            <Kids css={{ flex: 1, marginTop: '8px', height: '26px' }} />
+            <Athletics css={{ flex: 1 }} />
+            <Fit css={{ flex: 1, maxHeight: '17px' }} />
           </Group>
-          <Class />
           <Class />
           <Class />
         </ScheduleRow>
@@ -326,11 +348,12 @@ const AboutPage = ({ data }) => (
           <Fit css={{ flex: 1, maxHeight: '17px' }} />
           <OpenGym css={{ flex: 1 }} />
           <Class />
+          <Class />
           <Group>
             <Class css={{ flex: 1 }} />
             <Kids css={{ flex: 1, marginTop: '8px', height: '26px' }} />
+            <Fit css={{ flex: 1, height: '17px' }} />
           </Group>
-          <Class />
           <Class />
           <Class />
         </ScheduleRow>
@@ -349,11 +372,12 @@ const AboutPage = ({ data }) => (
           <Fit css={{ flex: 1, maxHeight: '17px' }} />
           <OpenGym css={{ flex: 1 }} />
           <Class />
+          <Class />
           <Group>
             <Class css={{ flex: 1 }} />
-            <Kids css={{ flex: 1, marginTop: '8px', height: '26px' }} />
+            <Athletics css={{ flex: 1 }} />
+            <Fit css={{ flex: 1, height: '17px' }} />
           </Group>
-          <Class />
           <Class />
           <Class />
         </ScheduleRow>
@@ -372,11 +396,12 @@ const AboutPage = ({ data }) => (
           <Fit css={{ flex: 1, maxHeight: '17px' }} />
           <OpenGym css={{ flex: 1 }} />
           <Class />
+          <Class />
           <Group>
             <Class css={{ flex: 1 }} />
             <Kids css={{ flex: 1, marginTop: '8px', height: '26px' }} />
+            <Fit css={{ flex: 1, height: '17px' }} />
           </Group>
-          <Class />
           <Class />
           <Class />
         </ScheduleRow>
@@ -395,11 +420,12 @@ const AboutPage = ({ data }) => (
           <Fit css={{ flex: 1, maxHeight: '17px' }} />
           <OpenGym css={{ flex: 1 }} />
           <Class />
+          <Class />
           <Group>
             <Class css={{ flex: 1 }} />
-            <Kids css={{ flex: 1, marginTop: '8px', height: '26px' }} />
+            <Athletics css={{ flex: 1 }} />
+            <Fit css={{ flex: 1, height: '17px' }} />
           </Group>
-          <Class />
           <Class />
           <Empty />
         </ScheduleRow>
@@ -409,7 +435,10 @@ const AboutPage = ({ data }) => (
           <Empty />
           <Empty css={{ height: '17px' }} />
           <Fit css={{ height: '17px' }} />
-          <Class />
+          <Group>
+            <Class css={{ flex: 1 }} />
+            <Athletics css={{ flex: 1 }} />
+          </Group>
           <OpenGym />
           <OpenGym />
           <Empty />

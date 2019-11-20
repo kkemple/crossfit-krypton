@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import Image from 'gatsby-image'
+import Carousel from 'nuka-carousel'
 
 import {
   ContentContainer,
@@ -54,9 +55,57 @@ const TrainingCamp = ({ data }) => (
           </ExternalLink>
           .
         </SectionContent>
-        {/* <Button href="https://crossfitkrypton.sites.zenplanner.com/event.cfm?eventId=4A882120-69B9-4E59-AA3F-F33EF7B968D0">
+        <Carousel
+          style={{
+            height: '200px',
+            marginTop: '64px',
+            fontWeight: 'bold',
+            fontSize: '20px',
+            padding: '24px',
+          }}
+          autoplayInterval={3000}
+          withoutControls
+          autoplay
+          wrapAround
+        >
+          <div>
+            <p>
+              This camp went beyond my expectations. It’s one thing to put in
+              the training time and effort, but being able to get knowledge and
+              feedback from some of the best in the world is priceless. You will
+              come out of this camp a better athlete guaranteed. I know I did.
+              Ben and his family are some of the nicest people you will meet.
+              Great gym, awesome coaches, and just a great time overall. Highly
+              recommend
+            </p>
+          </div>
+          <div>
+            <p>
+              This was an amazing experience where I learned lots of tips from
+              Ben and Adam and had a lot of fun working out a lot! Great
+              atmosphere, amazing gym. All around great experience and will be
+              coming back!
+            </p>
+          </div>
+          <div>
+            <p>
+              The weekend working out and talking with the Krypton athletes was
+              an extremely valuable training lesson, and they made it just plain
+              fun. The athletes attending were at all different levels but were
+              all challenged to do their best and learn from the world-class
+              coaches and athletes at Krypton. I'd do it again in a heartbeat.
+            </p>
+          </div>
+          <div>
+            <p>
+              Great time! Really welcoming group and fun atmosphere. Would
+              definitely recommend!
+            </p>
+          </div>
+        </Carousel>
+        <Button href="https://crossfitkrypton.sites.zenplanner.com/event.cfm?eventId=E20A3216-A8E1-420C-B2CF-3CCF474BC87A">
           Learn More
-        </Button> */}
+        </Button>
       </Section>
     </ContentContainer>
   </Layout>
