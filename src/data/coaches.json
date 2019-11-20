@@ -98,8 +98,8 @@
     "id": "georgie-brain",
     "name": "Georgie Brain",
     "certifications": [
-      "CrossFit Level 1 Trainer",
       "CrossFit Level 2 Trainer",
+      "CrossFit Level 1 Trainer",
       "CrossFit Gymnastics"
     ],
     "short": "Georgie Brain is CrossFit Level 2 and CrossFit Gymnastics trainer.",
@@ -111,7 +111,7 @@
   {
     "id": "nicky-crais",
     "name": "Nicky Crais",
-    "certifications": ["CrossFit Level 1 Trainer", "CrossFit Level 2 Trainer"],
+    "certifications": ["CrossFit Level 2 Trainer", "CrossFit Level 1 Trainer"],
     "short": "Nicky Crais is a CrossFit Level 1 and CrossFit Level 2 trainer.",
     "bio": [
       "Nicky Crais is a mother to two girls and a military spouse. Nicky grew up in Minnesota playing volleyball, basketball and softball. After 2 years of playing collegiate sports, she concentrated on completing her Bachelors degree in Athletic Training and Exercise Science and her Masters in Healthcare Administration.",
