@@ -468,7 +468,6 @@ const AboutPage = ({ data }) => (
           <Empty />
         </ScheduleRow>
       </Schedule>
-      <SectionDivider />
       <SectionSpacer />
       <SectionTitle id="contact">Get In Touch</SectionTitle>
       <SectionSubTitle>We'd love to hear from you!</SectionSubTitle>
