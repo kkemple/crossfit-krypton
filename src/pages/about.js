@@ -351,7 +351,7 @@ const AboutPage = ({ data }) => (
           <Class />
           <Group>
             <Class css={{ flex: 1 }} />
-            <Kids css={{ flex: 1, marginTop: '8px', height: '26px' }} />
+            <Kids css={{ flex: 1, height: '26px' }} />
             <Fit css={{ flex: 1, height: '17px' }} />
           </Group>
           <Class />
@@ -399,7 +399,7 @@ const AboutPage = ({ data }) => (
           <Class />
           <Group>
             <Class css={{ flex: 1 }} />
-            <Kids css={{ flex: 1, marginTop: '8px', height: '26px' }} />
+            <Kids css={{ flex: 1, height: '26px' }} />
             <Fit css={{ flex: 1, height: '17px' }} />
           </Group>
           <Class />
