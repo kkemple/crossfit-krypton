@@ -28,7 +28,7 @@ const Button = styled(`a`)`
 `
 
 const ExternalLink = styled(`a`)`
-  color: #cd3c33;
+  color: #000000;
 `
 
 const TrainingCamp = ({ data }) => (
@@ -43,27 +43,30 @@ const TrainingCamp = ({ data }) => (
           Join us for CrossFit Krypton’s next training camp, January 18th -
           19th.
         </SectionTitle>
-        <SectionSubTitle>
+        <SectionSubTitle style={{ fontSize: '20px', marginTop: '48px' }}>
           Learn, be coached, train hard, and hangout for two days with Ben
-          Smith, Adam Klink, and some of the other Krypton team!
-        </SectionSubTitle>
-        <SectionContent>
-          We will talk programming, skill building, goal setting, recovery,
-          nutrition, and anything else you want to discuss! We are located our{' '}
+          Smith, Adam Klink, and some of the other Krypton team! We will talk
+          programming, skill building, goal setting, recovery, nutrition, and
+          anything else you want to discuss! We are located at our{' '}
           <ExternalLink href="https://goo.gl/maps/CKt6JSUqNK9rR8Qj6">
             new facility in Chesapeake, Virginia
           </ExternalLink>
           .
-        </SectionContent>
+        </SectionSubTitle>
         <Carousel
           style={{
             height: '200px',
             marginTop: '64px',
             fontWeight: 'bold',
             fontSize: '20px',
+            fontStyle: 'italic',
+            color: '#aaaaaa',
             padding: '24px',
+            marginLeft: 'auto',
+            marginRight: 'auto',
+            width: '800px',
           }}
-          autoplayInterval={3000}
+          autoplayInterval={5000}
           withoutControls
           autoplay
           wrapAround
@@ -104,7 +107,7 @@ const TrainingCamp = ({ data }) => (
           </div>
         </Carousel>
         <Button href="https://crossfitkrypton.sites.zenplanner.com/event.cfm?eventId=E20A3216-A8E1-420C-B2CF-3CCF474BC87A">
-          Learn More
+          Sign Up Now
         </Button>
       </Section>
     </ContentContainer>
