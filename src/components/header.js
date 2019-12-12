@@ -130,7 +130,7 @@ const Header = ({ siteTitle, showDropShadow }) => (
           </NavItem>
           <ExternalNavItem
             target="_blank"
-            href="https://crossfitkrypton.sites.zenplanner.com/retail.cfm"
+            href="https://cfkrypton.myshopify.com"
           >
             Store <MdOpenInNew />
           </ExternalNavItem>
