@@ -69,6 +69,10 @@ const HeroImage = styled(Img)`
   @media (max-width: 480px) {
     height: 300px;
   }
+
+  img {
+    object-position: center -100px !important;
+  }
 `
 
 const HeroImageOverlay = styled(`div`)`
