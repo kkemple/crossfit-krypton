@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import Image from 'gatsby-image'
+import Img from 'gatsby-image'
 import Carousel from 'nuka-carousel'
 
 import {
@@ -31,32 +31,86 @@ const ExternalLink = styled(`a`)`
   color: #000000;
 `
 
+const HeroContainer = styled('div')`
+  width: 100%;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+
+  @media (max-width: 750px) {
+    height: 400px;
+  }
+
+  @media (max-width: 480px) {
+    height: 300px;
+  }
+`
+
+const HeroImageContainer = styled(`div`)`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+`
+
+const HeroImage = styled(Img)`
+  width: 100%;
+  height: 500px;
+  max-width: 2000px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (max-width: 750px) {
+    height: 400px;
+  }
+
+  @media (max-width: 480px) {
+    height: 300px;
+  }
+`
+
+const HeroImageOverlay = styled(`div`)`
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+`
+
 const TrainingCamp = ({ data }) => (
   <Layout>
-    <Image
-      css={{ marginBottom: '32px' }}
-      fluid={data.trainingCampImg.childImageSharp.fluid}
-    />
+    <HeroContainer>
+      <HeroImageContainer>
+        <Carousel
+          withoutControls
+          autoplay
+          wrapAround
+          speed={600}
+          autoplayInterval={5000}
+          transitionMode="fade"
+        >
+          {data.sliderImages.edges.map(({ node: image }) => {
+            return (
+              <HeroImage key={image.name} fluid={image.childImageSharp.fluid} />
+            )
+          })}
+        </Carousel>
+      </HeroImageContainer>
+      <HeroImageOverlay />
+    </HeroContainer>
     <ContentContainer>
-      <Section>
-        <SectionTitle>
-          Join us for CrossFit Krypton’s next training camp, January 18th -
-          19th.
-        </SectionTitle>
-        <SectionSubTitle style={{ fontSize: '20px', marginTop: '48px' }}>
-          Learn, be coached, train hard, and hangout for two days with Ben
-          Smith, Adam Klink, and some of the other Krypton team! We will talk
-          programming, skill building, goal setting, recovery, nutrition, and
-          anything else you want to discuss! We are located at our{' '}
-          <ExternalLink href="https://goo.gl/maps/CKt6JSUqNK9rR8Qj6">
-            new facility in Chesapeake, Virginia
-          </ExternalLink>
-          .
+      <Section style={{ marginTop: '48px' }}>
+        <SectionTitle>Krypton Training Camp V.3</SectionTitle>
+        <SectionSubTitle style={{ fontSize: '20px' }}>
+          April 4th and 5th
         </SectionSubTitle>
         <Carousel
           style={{
             height: '200px',
-            marginTop: '64px',
+            marginTop: '48px',
             fontWeight: 'bold',
             fontSize: '20px',
             fontStyle: 'italic',
@@ -106,9 +160,19 @@ const TrainingCamp = ({ data }) => (
             </p>
           </div>
         </Carousel>
-        <Button href="https://crossfitkrypton.sites.zenplanner.com/event.cfm?eventId=E20A3216-A8E1-420C-B2CF-3CCF474BC87A">
+        <Button href="https://crossfitkrypton.sites.zenplanner.com/event.cfm?eventId=89CE9413-57ED-4174-AEF4-FACC27FF397C">
           Sign Up Now
         </Button>
+        <p style={{ marginTop: '48px' }}>
+          Learn, be coached, train hard, and hangout for two days with Ben
+          Smith, Adam Klink, and some of the other Krypton team! We will talk
+          programming, skill building, goal setting, recovery, nutrition, and
+          anything else you want to discuss! We are located at our{' '}
+          <ExternalLink href="https://goo.gl/maps/CKt6JSUqNK9rR8Qj6">
+            new facility in Chesapeake, Virginia
+          </ExternalLink>
+          .
+        </p>
       </Section>
     </ContentContainer>
   </Layout>
@@ -124,6 +188,20 @@ export const query = graphql`
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    sliderImages: allFile(
+      filter: { name: { regex: "/^training-camp-slide-show-/" } }
+    ) {
+      edges {
+        node {
+          name
+          childImageSharp {
+            fluid(maxWidth: 2000) {
+              ...GatsbyImageSharpFluid
+            }
+          }
         }
       }
     }
