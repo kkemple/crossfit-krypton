@@ -116,8 +116,8 @@ const Header = ({ siteTitle, showDropShadow }) => (
           <NavItem activeStyle={activeStyles} to="/">
             Home
           </NavItem>
-          <NavItem activeStyle={activeStyles} to="/training-camp">
-            Training Camp
+          <NavItem activeStyle={activeStyles} to="/about">
+            About
           </NavItem>
           <NavItem activeStyle={activeStyles} to="/memberships">
             Memberships
@@ -125,8 +125,8 @@ const Header = ({ siteTitle, showDropShadow }) => (
           <NavItem activeStyle={activeStyles} to="/online-programming">
             Online Programming
           </NavItem>
-          <NavItem activeStyle={activeStyles} to="/about">
-            About
+          <NavItem activeStyle={activeStyles} to="/training-camp">
+            Training Camp
           </NavItem>
           <ExternalNavItem
             target="_blank"
