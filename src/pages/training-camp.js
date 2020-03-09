@@ -109,7 +109,7 @@ const TrainingCamp = ({ data }) => (
       <Section style={{ marginTop: '48px' }}>
         <SectionTitle>Krypton Training Camp V.3</SectionTitle>
         <SectionSubTitle style={{ fontSize: '20px' }}>
-          April 4th and 5th
+          Stay Tuned for Dates!
         </SectionSubTitle>
         <Carousel
           style={{
@@ -164,9 +164,9 @@ const TrainingCamp = ({ data }) => (
             </p>
           </div>
         </Carousel>
-        <Button href="https://crossfitkrypton.sites.zenplanner.com/event.cfm?eventId=89CE9413-57ED-4174-AEF4-FACC27FF397C">
+        {/* <Button href="https://crossfitkrypton.sites.zenplanner.com/event.cfm?eventId=89CE9413-57ED-4174-AEF4-FACC27FF397C">
           Sign Up Now
-        </Button>
+        </Button> */}
         <p style={{ marginTop: '48px' }}>
           Learn, be coached, train hard, and hangout for two days with Ben
           Smith, Adam Klink, and some of the other Krypton team! We will talk
