@@ -14,7 +14,7 @@ const navItemCss = css`
   color: black;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   margin-left: 20px;
 
@@ -133,6 +133,12 @@ const Header = ({ siteTitle, showDropShadow }) => (
             href="https://cfkrypton.myshopify.com"
           >
             Store <MdOpenInNew />
+          </ExternalNavItem>
+          <ExternalNavItem
+            target="_blank"
+            href="https://crossfitkrypton.sites.zenplanner.com/calendar.cfm"
+          >
+            Member Schedule <MdOpenInNew />
           </ExternalNavItem>
         </Nav>
       </FlexContainer>
