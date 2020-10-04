@@ -22,7 +22,7 @@
     "gatsby-plugin-sharp": "^2.0.14",
     "gatsby-source-contentful": "^2.3.49",
     "gatsby-source-filesystem": "^2.0.8",
-    "gatsby-source-instagram": "^0.5.1",
+    "gatsby-source-instagram": "^0.9",
     "gatsby-transformer-json": "^2.1.6",
     "gatsby-transformer-sharp": "^2.1.8",
     "http-proxy-middleware": "^0.19.1",

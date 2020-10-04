@@ -713,7 +713,7 @@
     core-js "^2.6.5"
     regenerator-runtime "^0.13.4"
 
-"@babel/preset-env@^7.0.0", "@babel/preset-env@^7.4.5", "@babel/preset-env@^7.8.7":
+"@babel/preset-env@^7.0.0", "@babel/preset-env@^7.8.7":
   version "7.8.7"
   resolved "https://registry.yarnpkg.com/@babel/preset-env/-/preset-env-7.8.7.tgz#1fc7d89c7f75d2d70c2b6768de6c2e049b3cb9db"
   integrity sha512-BYftCVOdAYJk5ASsznKAUl53EMhfBbr8CJ1X+AJLfGPscQkwJFiaV/Wn9DPH/7fzm2v6iRYJKYHSqyynTGw0nw==
@@ -6414,7 +6414,7 @@ gatsby-source-contentful@^2.3.49:
     lodash "^4.17.20"
     qs "^6.9.4"
 
-gatsby-source-filesystem@^2.0.27, gatsby-source-filesystem@^2.0.8:
+gatsby-source-filesystem@^2.0.8:
   version "2.1.56"
   resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-2.1.56.tgz#52e96ac7ea64846699662b9bcf34caf8a3a3f603"
   integrity sha512-+5I/RVqefaMErclztgJ1BZBT+NKquQ7UlARecwZWowcVuTMlsFv+s9U5CZaSCm6HFr+ycVnTH7L+GcTBwiE+9g==
@@ -6456,16 +6456,12 @@ gatsby-source-filesystem@^2.3.32:
     valid-url "^1.0.9"
     xstate "^4.13.0"
 
-gatsby-source-instagram@^0.5.1:
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/gatsby-source-instagram/-/gatsby-source-instagram-0.5.1.tgz#fbec84c5c2816522808d6c792d48f80149267dd7"
-  integrity sha512-/TPaPsUagdTBa8LDtAsuffnbCr+QbZxT1BIgCzOUfRvZFfu1iywle86ugiT2NkKDZNa6hz5LnUyF8mDqjQyMTQ==
+gatsby-source-instagram@^0.9:
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/gatsby-source-instagram/-/gatsby-source-instagram-0.9.0.tgz#a0778d9b9262c535a1788dcb522040a29305718f"
+  integrity sha512-g/TdvMkowzcoIGyHc5lygE2U+QYw+8d9829r2+/vu9mye+xtHXfGCEgCfGOvhDDHiCwTfodGN67RDMu+oSUOTw==
   dependencies:
-    "@babel/preset-env" "^7.4.5"
-    "@babel/runtime" "^7.4.5"
     axios "^0.19.0"
-    cheerio "^1.0.0-rc.3"
-    gatsby-source-filesystem "^2.0.27"
 
 gatsby-telemetry@^1.1.56:
   version "1.1.56"
