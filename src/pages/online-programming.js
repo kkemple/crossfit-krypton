@@ -65,11 +65,11 @@ const OnlineProgrammingPage = ({ data }) => (
             Learn More
           </Button>
         </SectionContent>
-        <SectionDivider />
+        {/* <SectionDivider />
         <InstaIcon />
         <br />
-        <b>@thebensmithblueprint</b>
-        <Coaches>
+        <b>@thebensmithblueprint</b> */}
+        {/* <Coaches>
           {data.allInstaNode.edges.map(({ node }) => {
             return (
               <Coach key={node.id}>
@@ -80,7 +80,7 @@ const OnlineProgrammingPage = ({ data }) => (
               </Coach>
             )
           })}
-        </Coaches>
+        </Coaches> */}
       </Section>
     </ContentContainer>
   </Layout>
@@ -88,29 +88,29 @@ const OnlineProgrammingPage = ({ data }) => (
 
 export default OnlineProgrammingPage
 
-export const query = graphql`
-  {
-    allInstaNode(
-      # filter: { mediaType: { regex: "/Image|Sidecar/" } }
-      limit: 20
-      sort: { fields: timestamp, order: DESC }
-    ) {
-      edges {
-        node {
-          id
-          preview
-          original
-          mediaType
-          localFile {
-            childImageSharp {
-              fluid {
-                src
-                srcSet
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-`
+// export const query = graphql`
+//   {
+//     allInstaNode(
+//       # filter: { mediaType: { regex: "/Image|Sidecar/" } }
+//       limit: 20
+//       sort: { fields: timestamp, order: DESC }
+//     ) {
+//       edges {
+//         node {
+//           id
+//           preview
+//           original
+//           mediaType
+//           localFile {
+//             childImageSharp {
+//               fluid {
+//                 src
+//                 srcSet
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// `
