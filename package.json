@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@contentful/rich-text-react-renderer": "^14.1.1",
     "@emotion/core": "^10.0.4",
     "@emotion/styled": "^10.0.4",
     "@reach/dialog": "^0.2.9",
@@ -19,6 +20,7 @@
     "gatsby-plugin-offline": "^2.0.16",
     "gatsby-plugin-react-helmet": "^3.0.2",
     "gatsby-plugin-sharp": "^2.0.14",
+    "gatsby-source-contentful": "^2.3.49",
     "gatsby-source-filesystem": "^2.0.8",
     "gatsby-source-instagram": "^0.5.1",
     "gatsby-transformer-json": "^2.1.6",

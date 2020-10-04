@@ -16,22 +16,22 @@ exports.createPages = ({ graphql, actions }) => {
   return new Promise((resolve, reject) => {
     graphql(`
       {
-        allCoachesJson {
+        allContentfulCoach {
           edges {
             node {
               id
+              slug
             }
           }
         }
       }
     `).then(result => {
-      result.data.allCoachesJson.edges.map(({ node }) => {
+      result.data.allContentfulCoach.edges.map(({ node }) => {
         createPage({
-          path: `/coaches/${node.id}`,
+          path: `/coaches/${node.slug}`,
           component: slash(coachTemplate),
           context: {
             id: node.id,
-            image: `${node.id}-coach`,
           },
         })
 

@@ -40,16 +40,16 @@ const Section = styled(`div`)`
 const MembershipsPage = ({ data }) => (
   <Layout>
     <ContentContainer>
-      {data.allMembershipsJson.edges.map(({ node }) => {
+      {data.allContentfulMembershipType.edges.map(({ node }) => {
         return (
           <Section key={node.id}>
             <SectionSpacer />
             <SectionTitle>{node.title}</SectionTitle>
             <SectionSubTitle>{node.rate}</SectionSubTitle>
-            <SectionContent>{node.notes}</SectionContent>
-            {node.action && (
-              <Button target="_blank" href={node.action.payload.href}>
-                {node.action.payload.text}
+            <SectionContent>{node.explainerText}</SectionContent>
+            {node.externalLinkText && (
+              <Button target="_blank" href={node.externalLink}>
+                {node.externalLinkText}
               </Button>
             )}
             <SectionDivider />
@@ -63,20 +63,16 @@ const MembershipsPage = ({ data }) => (
 export default MembershipsPage
 
 export const query = graphql`
-  query {
-    allMembershipsJson {
+  query Memberships {
+    allContentfulMembershipType(sort: { fields: [createdAt] }) {
       edges {
         node {
           id
-          title
+          explainerText
+          externalLink
+          externalLinkText
           rate
-          notes
-          action {
-            payload {
-              href
-              text
-            }
-          }
+          title
         }
       }
     }

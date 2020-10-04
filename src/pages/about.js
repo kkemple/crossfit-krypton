@@ -156,21 +156,14 @@ const AboutPage = ({ data }) => (
       </SectionSubTitle>
       <Section>
         <Coaches>
-          {data.allCoachesJson.edges.map(({ node }) => {
-            const { node: coachImage } = data.allFile.edges.find(
-              ({ node: image }) =>
-                image.name.toLowerCase().includes(node.id.toLowerCase())
-            )
+          {data.allContentfulCoach.edges.map(({ node }) => {
             return (
               <Coach key={node.name}>
-                <Link to={`/coaches/${node.id}`}>
-                  <CoachImg
-                    alt={node.name}
-                    fluid={coachImage.childImageSharp.fluid}
-                  />
+                <Link to={`/coaches/${node.slug}`}>
+                  <CoachImg alt={node.name} fluid={node.profilePicture.fluid} />
                 </Link>
                 <CoachTitle>{node.name}</CoachTitle>
-                <CoachDescription>{node.short}</CoachDescription>
+                <CoachDescription>{node.shortDescription}</CoachDescription>
               </Coach>
             )
           })}
@@ -178,296 +171,20 @@ const AboutPage = ({ data }) => (
       </Section>
       <SectionDivider />
       <SectionSpacer />
-      <SectionTitle id="schedule">Schedule</SectionTitle>
+
+      <ContentContainer style={{ display: 'grid', alignContent: 'center' }}>
+        <iframe
+          src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FNew_York&amp;src=Y185OWgzNWFuaWRsOWNvNWw0ZDJpZWVqaDNiMEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%234285F4&amp;mode=WEEK&amp;showNav=1&amp;showDate=1&amp;showTabs=0&amp;showCalendars=0"
+          width="100%"
+          height="600"
+          frameborder="0"
+          scrolling="no"
+        ></iframe>
+      </ContentContainer>
       <SectionSubTitle>
         Schedule subject to change, always reach out to us around holidays!
       </SectionSubTitle>
-      <ScheduleLegend
-        css={{
-          maxWidth: '400px',
-          marginLeft: 'auto',
-          marginRight: 'auto',
-          marginBottom: '24px',
-        }}
-      >
-        <div css={{ display: 'flex', alignItems: 'center' }}>
-          <div
-            css={{
-              width: '12px',
-              height: '12px',
-              backgroundColor: '#cd3c33',
-              marginRight: '4px',
-              display: 'inline-block',
-              borderRadius: '50%',
-            }}
-          />
-          <span css={{ fontSize: '12px', textTransform: 'uppercase' }}>
-            Class
-          </span>
-        </div>
-        <div css={{ display: 'flex', alignItems: 'center' }}>
-          <div
-            css={{
-              width: '12px',
-              height: '12px',
-              backgroundColor: 'black',
-              marginRight: '4px',
-              display: 'inline-block',
-              borderRadius: '50%',
-            }}
-          />
-          <span css={{ fontSize: '12px', textTransform: 'uppercase' }}>
-            Open Gym
-          </span>
-        </div>
-        <div css={{ display: 'flex', alignItems: 'center' }}>
-          <div
-            css={{
-              width: '12px',
-              height: '12px',
-              backgroundColor: '#90caf9',
-              marginRight: '4px',
-              display: 'inline-block',
-              borderRadius: '50%',
-            }}
-          />
-          <span css={{ fontSize: '12px', textTransform: 'uppercase' }}>
-            Fit
-          </span>
-        </div>
-        <div css={{ display: 'flex', alignItems: 'center' }}>
-          <div
-            css={{
-              width: '12px',
-              height: '12px',
-              backgroundColor: '#a5d6a7',
-              marginRight: '4px',
-              display: 'inline-block',
-              borderRadius: '50%',
-            }}
-          />
-          <span css={{ fontSize: '12px', textTransform: 'uppercase' }}>
-            Kids
-          </span>
-        </div>
-        <div css={{ display: 'flex', alignItems: 'center' }}>
-          <div
-            css={{
-              width: '12px',
-              height: '12px',
-              backgroundColor: '#9b59b6',
-              marginRight: '4px',
-              display: 'inline-block',
-              borderRadius: '50%',
-            }}
-          />
-          <span css={{ fontSize: '12px', textTransform: 'uppercase' }}>
-            Athletics
-          </span>
-        </div>
-      </ScheduleLegend>
-      <ScheduleLabels>
-        <ScheduleRow />
-        <ScheduleRow>
-          <ScheduleLabel>Monday</ScheduleLabel>
-        </ScheduleRow>
-        <ScheduleRow>
-          <ScheduleLabel>Tuesday</ScheduleLabel>
-        </ScheduleRow>
-        <ScheduleRow>
-          <ScheduleLabel>Wednesday</ScheduleLabel>
-        </ScheduleRow>
-        <ScheduleRow>
-          <ScheduleLabel>Thursday</ScheduleLabel>
-        </ScheduleRow>
-        <ScheduleRow>
-          <ScheduleLabel>Friday</ScheduleLabel>
-        </ScheduleRow>
-        <ScheduleRow>
-          <ScheduleLabel>Saturday</ScheduleLabel>
-        </ScheduleRow>
-        <ScheduleRow>
-          <ScheduleLabel>Sunday</ScheduleLabel>
-        </ScheduleRow>
-      </ScheduleLabels>
-      <ScheduleLabelsMobile>Mon - Sun</ScheduleLabelsMobile>
-      <Schedule>
-        <ScheduleRow css={{ borderRight: '1px solid #eeeeee' }}>
-          <ScheduleTime>5:00am</ScheduleTime>
-          <ScheduleTime>6:00am</ScheduleTime>
-          <ScheduleTime>7:00am</ScheduleTime>
-          <ScheduleTime>8:00am</ScheduleTime>
-          <ScheduleTime>9:00am</ScheduleTime>
-          <ScheduleTime>10:00am</ScheduleTime>
-          <ScheduleTime>11:00am</ScheduleTime>
-          <ScheduleTime>12:00pm</ScheduleTime>
-          <ScheduleTime>1:00pm</ScheduleTime>
-          <ScheduleTime>2:00pm</ScheduleTime>
-          <ScheduleTime>3:00pm</ScheduleTime>
-          <ScheduleTime>4:00pm</ScheduleTime>
-          <ScheduleTime>5:00pm</ScheduleTime>
-          <ScheduleTime>6:00pm</ScheduleTime>
-          <ScheduleTime css={{ borderBottom: 'none' }}>7:00pm</ScheduleTime>
-        </ScheduleRow>
-        <ScheduleRow>
-          <Class />
-          <Class />
-          <Class />
-          <Group>
-            <Class css={{ flex: 1 }} />
-            <Fit css={{ flex: 1, height: '17px' }} />
-          </Group>
-          <Class />
-          <Empty />
-          <Empty />
-          <Empty />
-          <Fit css={{ flex: 1, maxHeight: '17px' }} />
-          <OpenGym css={{ flex: 1 }} />
-          <Class />
-          <Class />
-          <Group>
-            <Class css={{ flex: 1 }} />
-            <Athletics css={{ flex: 1 }} />
-            <Fit css={{ flex: 1, maxHeight: '17px' }} />
-          </Group>
-          <Class />
-          <Class />
-        </ScheduleRow>
-        <ScheduleRow>
-          <Class />
-          <Class />
-          <Class />
-          <Group>
-            <Class css={{ flex: 1 }} />
-            <Fit css={{ flex: 1, height: '17px' }} />
-          </Group>
-          <Class />
-          <Empty />
-          <Empty />
-          <Empty />
-          <Fit css={{ flex: 1, maxHeight: '17px' }} />
-          <OpenGym css={{ flex: 1 }} />
-          <Class />
-          <Class />
-          <Group>
-            <Class css={{ flex: 1 }} />
-            <Kids css={{ flex: 1, height: '26px' }} />
-            <Fit css={{ flex: 1, height: '17px' }} />
-          </Group>
-          <Class />
-          <Class />
-        </ScheduleRow>
-        <ScheduleRow>
-          <Class />
-          <Class />
-          <Class />
-          <Group>
-            <Class css={{ flex: 1 }} />
-            <Fit css={{ flex: 1, height: '17px' }} />
-          </Group>
-          <Class />
-          <Empty />
-          <Empty />
-          <Empty />
-          <Fit css={{ flex: 1, maxHeight: '17px' }} />
-          <OpenGym css={{ flex: 1 }} />
-          <Class />
-          <Class />
-          <Group>
-            <Class css={{ flex: 1 }} />
-            <Athletics css={{ flex: 1 }} />
-            <Fit css={{ flex: 1, height: '17px' }} />
-          </Group>
-          <Class />
-          <Class />
-        </ScheduleRow>
-        <ScheduleRow>
-          <Class />
-          <Class />
-          <Class />
-          <Group>
-            <Class css={{ flex: 1 }} />
-            <Fit css={{ flex: 1, height: '17px' }} />
-          </Group>
-          <Class />
-          <Empty />
-          <Empty />
-          <Empty />
-          <Fit css={{ flex: 1, maxHeight: '17px' }} />
-          <OpenGym css={{ flex: 1 }} />
-          <Class />
-          <Class />
-          <Group>
-            <Class css={{ flex: 1 }} />
-            <Kids css={{ flex: 1, height: '26px' }} />
-            <Fit css={{ flex: 1, height: '17px' }} />
-          </Group>
-          <Class />
-          <Class />
-        </ScheduleRow>
-        <ScheduleRow>
-          <Class />
-          <Class />
-          <Class />
-          <Group>
-            <Class css={{ flex: 1 }} />
-            <Fit css={{ flex: 1, height: '17px' }} />
-          </Group>
-          <Class />
-          <Empty />
-          <Empty />
-          <Empty />
-          <Fit css={{ flex: 1, maxHeight: '17px' }} />
-          <OpenGym css={{ flex: 1 }} />
-          <Class />
-          <Class />
-          <Group>
-            <Class css={{ flex: 1 }} />
-            <Athletics css={{ flex: 1 }} />
-            <Fit css={{ flex: 1, height: '17px' }} />
-          </Group>
-          <Class />
-          <Empty />
-        </ScheduleRow>
-        <ScheduleRow>
-          <Empty />
-          <Empty />
-          <Empty />
-          <Empty css={{ height: '17px' }} />
-          <Fit css={{ height: '17px' }} />
-          <Group>
-            <Class css={{ flex: 1 }} />
-            <Athletics css={{ flex: 1 }} />
-          </Group>
-          <OpenGym />
-          <OpenGym />
-          <Empty />
-          <Empty />
-          <Empty />
-          <Empty />
-          <Empty />
-          <Empty />
-          <Empty />
-          <Empty />
-        </ScheduleRow>
-        <ScheduleRow>
-          <Empty />
-          <Empty />
-          <Empty />
-          <Empty />
-          <Empty />
-          <Empty />
-          <Empty />
-          <OpenGym />
-          <OpenGym />
-          <OpenGym />
-          <Empty />
-          <Empty />
-          <Empty />
-          <Empty />
-          <Empty />
-        </ScheduleRow>
-      </Schedule>
+      <SectionDivider />
       <SectionSpacer />
       <SectionTitle id="contact">Get In Touch</SectionTitle>
       <SectionSubTitle>We'd love to hear from you!</SectionSubTitle>
@@ -480,24 +197,17 @@ const AboutPage = ({ data }) => (
 export default AboutPage
 
 export const query = graphql`
-  query {
-    allCoachesJson {
-      edges {
-        node {
-          id
-          name
-          bio
-          short
-        }
-      }
-    }
-    allFile(filter: { name: { regex: "/-coach$/" } }) {
+  query About {
+    allContentfulCoach(sort: { fields: [createdAt] }) {
       edges {
         node {
           name
-          childImageSharp {
+          slug
+          certifications
+          shortDescription
+          profilePicture {
             fluid(maxWidth: 200) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyContentfulFluid
             }
           }
         }

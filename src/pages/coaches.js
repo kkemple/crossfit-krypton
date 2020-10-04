@@ -31,21 +31,14 @@ const CoachesPage = ({ data }) => (
       <SectionSpacer />
       <Section>
         <Coaches>
-          {data.allCoachesJson.edges.map(({ node }) => {
-            const { node: coachImage } = data.allFile.edges.find(
-              ({ node: image }) =>
-                image.name.toLowerCase().includes(node.id.toLowerCase())
-            )
+          {data.allContentfulCoach.edges.map(({ node }) => {
             return (
               <Coach key={node.name}>
-                <Link to={`/coaches/${node.id}`}>
-                  <CoachImg
-                    alt={node.name}
-                    fluid={coachImage.childImageSharp.fluid}
-                  />
+                <Link to={`/coaches/${node.slug}`}>
+                  <CoachImg alt={node.name} fluid={node.profilePicture.fluid} />
                 </Link>
                 <CoachTitle>{node.name}</CoachTitle>
-                <CoachDescription>{node.short}</CoachDescription>
+                <CoachDescription>{node.shortDescription}</CoachDescription>
               </Coach>
             )
           })}
@@ -58,24 +51,17 @@ const CoachesPage = ({ data }) => (
 export default CoachesPage
 
 export const query = graphql`
-  query {
-    allCoachesJson {
-      edges {
-        node {
-          id
-          name
-          bio
-          short
-        }
-      }
-    }
-    allFile(filter: { name: { regex: "/-coach$/" } }) {
+  query Coaches {
+    allContentfulCoach(sort: { fields: [createdAt] }) {
       edges {
         node {
           name
-          childImageSharp {
+          slug
+          certifications
+          shortDescription
+          profilePicture {
             fluid(maxWidth: 200) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyContentfulFluid
             }
           }
         }

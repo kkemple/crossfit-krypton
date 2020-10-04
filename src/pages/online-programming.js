@@ -90,10 +90,7 @@ export default OnlineProgrammingPage
 
 export const query = graphql`
   {
-    allInstaNode(
-      # filter: { mediaType: { regex: "/Image|Sidecar/" } }
-      limit: 20
-    ) {
+    allInstaNode(limit: 12, filter: { mediaType: { eq: "GraphImage" } }) {
       edges {
         node {
           id

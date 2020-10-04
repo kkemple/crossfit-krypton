@@ -5,6 +5,7 @@ import styled from '@emotion/styled'
 
 import Layout from '../components/layout'
 import { ContentContainer } from '../components'
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
 const CoachImg = styled(Img)`
   width: 300px;
@@ -74,22 +75,25 @@ const Container = styled(`div`)`
   }
 `
 
-const CoachPage = ({ data: { coachesJson, file } }) => (
+const CoachPage = ({ data: { contentfulCoach } }) => (
   <Layout>
     <Container>
       <ContentContainer>
-        <Coach key={coachesJson.name}>
-          <CoachImg alt={coachesJson.name} fluid={file.childImageSharp.fluid} />
+        <Coach key={contentfulCoach.name}>
+          <CoachImg
+            alt={contentfulCoach.name}
+            fluid={contentfulCoach.profilePicture.fluid}
+          />
           <CoachInfo>
-            <h2>{coachesJson.name}</h2>
-            <CoachCertifications>
-              {coachesJson.certifications.map(cert => (
-                <Certification>{cert}</Certification>
-              ))}
-            </CoachCertifications>
-            {coachesJson.bio.map(paragraph => (
-              <Bio>{paragraph}</Bio>
-            ))}
+            <h2>{contentfulCoach.name}</h2>
+            {!!contentfulCoach.certifications && (
+              <CoachCertifications>
+                {contentfulCoach.certifications.map(cert => (
+                  <Certification>{cert}</Certification>
+                ))}
+              </CoachCertifications>
+            )}
+            <Bio>{documentToReactComponents(contentfulCoach.bio.json)}</Bio>
           </CoachInfo>
         </Coach>
       </ContentContainer>
@@ -100,19 +104,16 @@ const CoachPage = ({ data: { coachesJson, file } }) => (
 export default CoachPage
 
 export const query = graphql`
-  query CoachQuey($id: String, $image: String) {
-    coachesJson(id: { eq: $id }) {
-      id
+  query CoachQuey($id: String) {
+    contentfulCoach(id: { eq: $id }) {
       name
-      bio
-      short
       certifications
-    }
-    file(name: { eq: $image }) {
-      name
-      childImageSharp {
-        fluid(maxWidth: 300) {
-          ...GatsbyImageSharpFluid
+      bio {
+        json
+      }
+      profilePicture {
+        fluid(maxWidth: 200) {
+          ...GatsbyContentfulFluid
         }
       }
     }

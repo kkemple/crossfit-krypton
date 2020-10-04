@@ -268,28 +268,6 @@ export const query = graphql`
         }
       }
     }
-    allCoachesJson(limit: 3) {
-      edges {
-        node {
-          id
-          name
-          bio
-          short
-        }
-      }
-    }
-    coachImages: allFile(filter: { name: { regex: "/-coach$/" } }) {
-      edges {
-        node {
-          name
-          childImageSharp {
-            fluid(maxWidth: 200) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-      }
-    }
     sliderImages: allFile(filter: { name: { regex: "/^slide-show-/" } }) {
       edges {
         node {

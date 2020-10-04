@@ -6,24 +6,18 @@ import Img from 'gatsby-image'
 import ContentContainer from './content-container'
 
 const query = graphql`
-  query {
-    allSponsorsJson {
-      edges {
-        node {
-          id
-          link
-        }
-      }
-    }
-    allFile(filter: { name: { regex: "/-logo$/" } }) {
+  query Sponsors {
+    allContentfulSponsors {
       edges {
         node {
           name
-          childImageSharp {
-            fluid(maxWidth: 150) {
-              ...GatsbyImageSharpFluid
+          logo {
+            fluid {
+              ...GatsbyContentfulFluid
             }
           }
+          link
+          id
         }
       }
     }
@@ -81,17 +75,10 @@ export default () => (
           <a href="http://eepurl.com/gw9TcP">Krypton newsletter</a>!
         </Newsletter>
         <Sponsors>
-          {data.allSponsorsJson.edges.map(({ node }) => {
-            const { node: sponsorImage } = data.allFile.edges.find(
-              ({ node: image }) =>
-                image.name.toLowerCase().includes(node.id.toLowerCase())
-            )
+          {data.allContentfulSponsors.edges.map(({ node }) => {
             return (
               <a key={node.id} href={node.link}>
-                <SponsorImg
-                  alt={node.name}
-                  fluid={sponsorImage.childImageSharp.fluid}
-                />
+                <SponsorImg alt={node.name} fluid={node.logo.fluid} />
               </a>
             )
           })}

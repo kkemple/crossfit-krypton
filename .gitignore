@@ -72,3 +72,6 @@ yarn-error.log
 .yarn-integrity
 
 functions/
+
+# Local Netlify folder
+.netlify
